@@ -1,5 +1,7 @@
 @import './base.css';
 
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Teko&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -8,22 +10,13 @@
   list-style: none;
   text-decoration: none;
   color: rgb(255, 255, 255);
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
-}
-
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
 }
