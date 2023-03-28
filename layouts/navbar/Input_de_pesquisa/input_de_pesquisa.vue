@@ -32,20 +32,22 @@ export default {
 
 <style scoped>
 .caixaDePesquisa input {
-    padding: 13px;
+    padding: 10px 8px;
     border: none;
+    border-bottom: 1px solid white;
     color: var(--cor-preta);
+    background-color: transparent;
 }
 
 .caixaDePesquisa input:nth-of-type(1) {
     border-top-left-radius: 3px;
-    width: 25vw;
+    width: 18vw;
     border-bottom-left-radius: 3px;
 }
 
 .caixaDePesquisa input:nth-of-type(2) {
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
-    background-color: var(--cor-amarela);
+    background-color: transparent;
 }
 </style>

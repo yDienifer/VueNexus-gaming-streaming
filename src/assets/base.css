@@ -1,9 +1,9 @@
 :root {
-  --cor-preta: #0B0C10;
-  --cor-vermelha: #E84C3D;
-  --cor-branca: #FFFFFF;
-  --cor-cinza-escuro: #3A3E4A;
-  --cor-amarela: #E9D758;
+  --cor-folly: #F24464;
+  --cor-french-rose: #F24472;
+  --cor-tyrian-purple: #591931;
+  --cor-jungle-green: #1FA680;
+  --cor-aquamarine: #2EF2BB;
 }
 
 @media (prefers-color-scheme: dark) {

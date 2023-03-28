@@ -6,7 +6,9 @@ import InputDePesquisa from './navbar/Input_de_pesquisa/input_de_pesquisa.vue';
 
 <template>
     <header>
-        <span id="logoVueNexus"><i class="fa-solid fa-spa"></i>VueNexus</span>
+        <div class="logoVueNexusContainer">
+            <i class="fa-solid fa-spa"></i><span id="logoVueNexus">VueNexus</span>
+        </div>
         <InputDePesquisa />
         <nav id="nav-para-desktop">
             <ul>
@@ -15,13 +17,13 @@ import InputDePesquisa from './navbar/Input_de_pesquisa/input_de_pesquisa.vue';
                 <li><a href="#">Streams</a></li>
             </ul>
         </nav>
-        <nav id="nav-para-mobile">
-            <div class="hamburguer">
+        <nav id="nav-para-mobile" :class="{ show: menu_aberto }">
+            <div class="hamburguer" :class="{ show: menu_aberto }" @click="animacaoMenuMobile">
                 <div class="linha-1"></div>
                 <div class="linha-2"></div>
                 <div class="linha-3"></div>
             </div>
-            <aside id="sidemenu-para-mobile">
+            <aside id="sidemenu-para-mobile" :class="{ show: menu_aberto }" @click="animacaoMenuMobile">
                 <section id="conta-do-usuario">
                     <i class="fa-solid fa-user-ninja"></i>
                     <span>Sign in</span>
@@ -39,23 +41,41 @@ import InputDePesquisa from './navbar/Input_de_pesquisa/input_de_pesquisa.vue';
 
 <script lang="ts">
 export default {
-    name: "BarraDeNavegação",
+    name: "BarraDeNavegacao",
     components: {
         InputDePesquisa,
     },
     data() {
         return {
-            // Define dados dos componentes
             input_name: "",
+            menu_aberto: false,
+            sidebar_aberta: false,
         };
     },
     methods: {
         // Responsável por funções da aplicação
-        btnParaEnviarPesquisa(e) {
+        animacaoMenuMobile(): void {
+            this.menu_aberto = !this.menu_aberto;
+            this.sidebar_aberta = !this.menu_aberto;
+        },
+        btnParaEnviarPesquisa(e: MouseEvent): void {
             e.preventDefault();
             console.log(this.input_name);
-            this.name = this.input_name;
+            this.input_name = "";
         },
+        clickForaDoSidebar(e: MouseEvent): void {
+            if (this.menu_aberto) {
+                if (!(e.target as HTMLElement).closest("#nav-para-mobile")) {
+                    this.menu_aberto = false;
+                }
+            }
+        },
+    },
+    mounted() {
+        document.addEventListener("click", this.clickForaDoSidebar);
+    },
+    beforeUnmount() {
+        document.removeEventListener("click", this.clickForaDoSidebar);
     },
 };
 </script>
@@ -65,23 +85,22 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--cor-cinza-escuro);
+    background-color: #111111;
     height: 100%;
-    width: 95vw;
+    width: 100vw;
     padding: 20px 50px;
-    margin-top: 10px;
-    border-radius: 10px;
 }
 
 header #logoVueNexus {
-    font-size: clamp(14px, 3vw, 30px);
-    font-family: "Teko", sans-serif;
+    font-size: clamp(14px, 3vw, 24px);
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
 }
 
 header i:nth-of-type(1) {
-    font-size: clamp(20px, 2vw, 26px);
+    font-size: clamp(26px, 2vw, 26px);
     margin-right: 4px;
-    color: var(--cor-vermelha);
+    color: var(--cor-folly);
 }
 
 header i:nth-of-type(1),
@@ -109,7 +128,7 @@ header #logoVueNexus {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: var(--cor-vermelha);
+    background-color: var(--cor-french-rose);
     transform: scaleX(0);
     transform-origin: bottom right;
     /* Diz que a linha começa em baixo,
@@ -127,6 +146,10 @@ header #logoVueNexus {
     display: none;
 }
 
+#nav-para-mobile .hamburguer {
+    z-index: 2;
+}
+
 #nav-para-mobile .hamburguer .linha-1,
 #nav-para-mobile .hamburguer .linha-2,
 #nav-para-mobile .hamburguer .linha-3 {
@@ -141,14 +164,17 @@ header #logoVueNexus {
 }
 
 #nav-para-mobile #sidemenu-para-mobile {
-    display: none;
+    display: block;
     position: absolute;
     top: 0;
-    left: 0;
+    left: -100px;
+    opacity: 0;
     background-color: #000000;
-    padding: 50px 15px;
-    width: 50%;
+    padding: 90px 35px 50px 35px;
+    width: 100%;
     border-bottom-right-radius: 5px;
+    transition: all 0.8s;
+    z-index: 1;
 }
 
 #nav-para-mobile #conta-do-usuario {
@@ -159,10 +185,11 @@ header #logoVueNexus {
 
 #nav-para-mobile #conta-do-usuario span {
     margin: 0 10px;
+    font-size: clamp(14px, 3vw, 16px);
 }
 
 #nav-para-mobile i {
-    font-size: 3.5em;
+    font-size: clamp(2.5em,3vw, 3.5em);
 }
 
 #nav-para-mobile ul li:nth-of-type(1) {
@@ -175,6 +202,25 @@ header #logoVueNexus {
 
 #nav-para-mobile ul li:nth-of-type(3) {
     margin-bottom: 0;
+}
+
+/* TypeScript CSS */
+.hamburguer.show .linha-1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburguer.show .linha-2 {
+    opacity: 0;
+}
+
+.hamburguer.show .linha-3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+#nav-para-mobile #sidemenu-para-mobile.show {
+    display: block;
+    left: 0;
+    opacity: 1;
 }
 
 @media (max-width: 768px) {
@@ -190,6 +236,12 @@ header #logoVueNexus {
     #nav-para-mobile {
         display: flex;
         align-items: center;
+    }
+}
+
+@media (max-width: 425px) {
+    header #logoVueNexus {
+        display: none;
     }
 }
 </style>
