@@ -50,4 +50,11 @@ export default {
     border-bottom-right-radius: 3px;
     background-color: transparent;
 }
+
+@media (max-width: 768px) {
+    .caixaDePesquisa input:nth-of-type(1) {
+        width: 28vw;
+    }
+
+}
 </style>
