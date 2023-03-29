@@ -2,7 +2,7 @@
 /* Descreve o componente de forma mais 
 simplificada */
 
-import BarraDeNavegação from "../layouts/navbar.vue";
+import BarraDeNavegação from "../layouts/navbar/navbar.vue";
 import BannerDoSite from "./components/banner_do_site/banner_do_site.vue";
 </script>
 
