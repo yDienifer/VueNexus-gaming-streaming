@@ -115,31 +115,24 @@ span:hover::after {
     transform: scaleX(100%);
 }
 
-@media (max-width: 768px) {
-
-    .menu-lateral-container {
-        padding: 0 15px;
-    }
-
+@media (max-width: 768px){
     .descubra-atalhos a {
+        display: none;
+    }
+    span {
         display: none;
     }
 
     .descubra-atalhos {
-        padding: 0;
-        margin: 0;
-        border-bottom: none;
-    }
-
-    i {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        width: 100%;
+        border-bottom: none;
     }
+}
+@media (max-width: 425px) {
 
-    span {
+    .menu-lateral-container {
         display: none;
     }
 }

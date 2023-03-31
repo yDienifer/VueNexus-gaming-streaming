@@ -24,14 +24,15 @@ export default {
   <div>
     <BarraDeNavegação />
     <MenuLateral />
-    <div class="conteudo-do-site">
+    <main>
       <BannerDoSite />
-    </div>
+    </main>
   </div>
 </template>
 
 <style scoped>
-.conteudo-do-site {
+
+main {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -40,7 +41,7 @@ export default {
   overflow-y: scroll;
 }
 
-.conteudo-do-site::-webkit-scrollbar {
+main::-webkit-scrollbar {
     width: 0px;
 }
 

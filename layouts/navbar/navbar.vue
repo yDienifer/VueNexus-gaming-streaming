@@ -99,8 +99,9 @@ header {
   align-items: center;
   height: 100%;
   width: 100vw;
-  padding: 20px 35px;
+  padding: 20px 60px;
   position: relative;
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
 }
 
 header::before {
@@ -320,6 +321,10 @@ header nav {
 @media (max-width: 425px) {
   header #logoVueNexus {
     display: none;
+  }
+  header {
+    clip-path: none;
+    padding: 20px;
   }
 }
 </style>
