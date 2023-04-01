@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import botaoDeRedimensionamento from "../botao/botao.vue";
 </script>
 
 <template>
@@ -6,8 +7,8 @@
         <div id="bannerBackground"></div>
         <div class="conteudoDoBanner">
             <h1>Watch the most exciting Valorant matches in real-time.</h1>
-            <button>Meet the streamers</button>
             <!-- Adiciona um scroll reveal aq -->
+            <botaoDeRedimensionamento id="btn" titulo-introdutorio-do-btn="Meet the streamers" />
         </div>
     </div>
 </template>
@@ -15,6 +16,9 @@
 <script lang="ts">
 export default {
     name: "BannerDoSite",
+    components: {
+        botaoDeRedimensionamento,
+    }
 };
 </script>
 
@@ -65,17 +69,6 @@ export default {
     color: white;
 }
 
-.conteudoDoBanner button {
-    background-color: var(--cor-folly);
-    padding: 15px 0;
-    width: 35%;
-    border: none;
-    font-size: clamp(12px, 3vw, 16px);
-    border-radius: 5px;
-    margin-top: 10px;
-    cursor: pointer;
-}
-
 @media (max-width: 1024px) {
     .bannerContainer {
         width: 72vw;
@@ -102,10 +95,6 @@ export default {
         height: 100vw;
         top: 0;
     }
-
-    .conteudoDoBanner button {
-    width: 85%;
-}
 
     .conteudoDoBanner {
         display: flex;

@@ -99,7 +99,7 @@ header {
   align-items: center;
   height: 100%;
   width: 100vw;
-  padding: 20px 60px;
+  padding: 20px 65px;
   position: relative;
   clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
 }
@@ -130,6 +130,7 @@ header .logoVueNexusContainer p {
   font-size: clamp(14px, 3vw, 24px);
   font-family: "Bebas Neue", cursive;
   text-transform: uppercase;
+  margin-left: 5px;
 }
 
 header .logoVueNexusContainer p::first-letter {
@@ -141,21 +142,16 @@ header .logoVueNexusContainer p::first-letter {
   width: 100%;
 }
 
-header i:nth-of-type(2) {
-  font-size: clamp(26px, 2vw, 26px);
-  margin-right: 4px;
-  color: var(--cor-folly);
-}
-
-header i:nth-of-type(1) {
-  font-size: clamp(26px, 2vw, 26px);
-  color: var(--cor-folly);
-}
-
 header .logoVueNexusContainer i:nth-of-type(1),
 header .logoVueNexusContainer p {
   cursor: pointer;
   display: inline-block;
+}
+
+header i:nth-of-type(1),
+header i:nth-of-type(2) {
+  font-size: clamp(26px, 2vw, 26px);
+  color: var(--cor-folly);
 }
 
 header nav {
@@ -193,6 +189,11 @@ header nav {
   border-left: 1px solid rgba(255, 255, 255, 0.582);
   padding-left: 25px;
   cursor: pointer;
+}
+
+#nav-para-desktop i:nth-of-type(2) {
+  border-left: none;
+  margin: 0;
 }
 
 #nav-para-desktop ul li:after {
