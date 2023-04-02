@@ -1,37 +1,36 @@
-<script setup lang="ts">
-/* Descreve o componente de forma mais 
-simplificada */
-
-import BarraDeNavegação from "../layouts/navbar/navbar.vue";
-import BannerDoSite from "./components/banner_do_site/banner_do_site.vue";
-import MenuLateral from "../layouts/menu_lateral/menu_lateral.vue";
-</script>
-
-<script lang="ts">
-/* Descreve de forma mais complexa a lógica
-de um componente. */
-
-export default {
-  components: {
-    BarraDeNavegação,
-    BannerDoSite,
-    MenuLateral,
-  },
-};
-</script>
-
 <template>
   <div>
     <BarraDeNavegação />
     <MenuLateral />
     <main>
       <BannerDoSite />
+      <section>
+        <span>The Best Players at the Top</span>
+        <videoStreamEstrutura />
+      </section>
     </main>
   </div>
 </template>
 
-<style scoped>
+<script lang="ts">
+import { defineComponent } from 'vue';
 
+import BarraDeNavegação from "../layouts/navbar/navbar.vue";
+import BannerDoSite from "./components/banner_do_site/banner_do_site.vue";
+import MenuLateral from "../layouts/menu_lateral/menu_lateral.vue";
+import videoStreamEstrutura from "./components/stream_estrutura/stream_estrutura.vue";
+
+export default defineComponent({
+  components: {
+    BarraDeNavegação,
+    BannerDoSite,
+    MenuLateral,
+    videoStreamEstrutura,
+  }
+});
+</script>
+
+<style scoped>
 main {
   display: flex;
   flex-direction: column;
@@ -42,7 +41,6 @@ main {
 }
 
 main::-webkit-scrollbar {
-    width: 0px;
+   width: 0px; 
 }
-
 </style>

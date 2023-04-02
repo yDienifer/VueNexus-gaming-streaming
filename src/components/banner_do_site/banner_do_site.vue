@@ -14,12 +14,14 @@ import botaoDeRedimensionamento from "../botao/botao.vue";
 </template>
 
 <script lang="ts">
-export default {
+import { defineComponent } from 'vue';
+
+export default defineComponent({
     name: "BannerDoSite",
     components: {
         botaoDeRedimensionamento,
     }
-};
+})
 </script>
 
 <style scoped>

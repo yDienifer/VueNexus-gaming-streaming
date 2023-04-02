@@ -22,9 +22,12 @@
 </template>
 
 <script lang="ts">
-export default {
+import { defineComponent } from 'vue';
+
+export default defineComponent({
     name: "MenuLateral",
-};
+})
+
 </script>
 
 <style scoped>
@@ -115,10 +118,11 @@ span:hover::after {
     transform: scaleX(100%);
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
     .descubra-atalhos a {
         display: none;
     }
+
     span {
         display: none;
     }
@@ -130,6 +134,7 @@ span:hover::after {
         border-bottom: none;
     }
 }
+
 @media (max-width: 425px) {
 
     .menu-lateral-container {

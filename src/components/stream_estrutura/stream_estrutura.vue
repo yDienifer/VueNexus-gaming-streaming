@@ -17,11 +17,13 @@
 </template>
 
 <script lang="ts">
-export default {
-    name: "videoLiveEstrutura",
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+    name: "videoStreamEstrutura",
     props: {
         fotoDaCapaDaLive: {
-            type: Blob,
+            type: String,
             default: "The live stream is unavailable, sorry! :(",
         },
         altDaImgDeCapaDaLive: {
@@ -32,7 +34,7 @@ export default {
             type: String,
         },
         fotoDePerfilDoStreamer: {
-            type: Blob,
+            type: String,
         },
         altDaFotoDePerfilDoStreamer: {
             type: String,
@@ -47,5 +49,5 @@ export default {
             default: "Unavailable",
         },
     },
-};
+}) 
 </script>

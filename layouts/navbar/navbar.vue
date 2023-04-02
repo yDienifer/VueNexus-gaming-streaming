@@ -43,8 +43,8 @@ import InputDePesquisa from "./Input_de_pesquisa/input_de_pesquisa.vue";
         </section>
         <ul>
           <li><a href="#">Home</a></li>
-          <li><a href="#">Lives</a></li>
           <li><a href="#">Streams</a></li>
+          <li><a href="#">Streamers</a></li>
         </ul>
       </aside>
     </nav>
