@@ -1,17 +1,3 @@
-<template>
-  <div>
-    <BarraDeNavegação />
-    <MenuLateral />
-    <main>
-      <BannerDoSite />
-      <section>
-        <span>The Best Players at the Top</span>
-        <videoStreamEstrutura />
-      </section>
-    </main>
-  </div>
-</template>
-
 <script lang="ts">
 import { defineComponent } from 'vue';
 
@@ -20,27 +6,41 @@ import BannerDoSite from "./components/banner_do_site/banner_do_site.vue";
 import MenuLateral from "../layouts/menu_lateral/menu_lateral.vue";
 import videoStreamEstrutura from "./components/stream_estrutura/stream_estrutura.vue";
 
+import SecaoDeStreams from './components/secao_de_streams/secaos_de_stream.vue';
+
 export default defineComponent({
   components: {
     BarraDeNavegação,
     BannerDoSite,
     MenuLateral,
     videoStreamEstrutura,
+    SecaoDeStreams,
   }
 });
 </script>
+
+<template>
+  <div>
+    <BarraDeNavegação />
+    <MenuLateral />
+    <main>
+      <BannerDoSite />
+      <SecaoDeStreams />
+    </main>
+  </div>
+</template>
 
 <style scoped>
 main {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   align-items: flex-end;
-  width: 100vw;
-  overflow-y: scroll;
+  width: 100%;
+  height: 90vh;
+  overflow-x: hidden;
 }
 
 main::-webkit-scrollbar {
-   width: 0px; 
+  width: 0px;
 }
 </style>

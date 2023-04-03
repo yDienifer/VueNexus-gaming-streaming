@@ -26,10 +26,11 @@ export default defineComponent({
 
 <style scoped>
 .bannerContainer {
-    position: relative;
-    top: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
     width: 79%;
-    height: 50vw;
+    position: relative;
     z-index: -2;
 }
 
@@ -40,7 +41,7 @@ export default defineComponent({
     opacity: 0.9;
     filter: grayscale(0.5);
     width: 100vw;
-    height: 100vw;
+    height: 950px;
     position: absolute;
     border-radius: 10px;
     z-index: -1;
@@ -49,9 +50,7 @@ export default defineComponent({
 
 .conteudoDoBanner {
     position: absolute;
-    top: 50%;
-    margin-left: 45px;
-    transform: translateY(-50%);
+    margin: 20% 0 0 45px;
     width: 90%;
     max-width: 750px;
     background: rgba(255, 255, 255, 0.1);
@@ -106,8 +105,17 @@ export default defineComponent({
     }
 
     #bannerBackground {
-        background-size: 190%;
+        background-image: url(/public/static/img/banner/banner.png);
+        background-size: 310%;
+        background-position: -200px 0;
+        background-repeat: no-repeat;
         border-radius: 0;
+    }
+}
+
+@media (max-width: 425px) {
+    .bannerContainer {
+        margin-top: 0;
     }
 }
 </style>

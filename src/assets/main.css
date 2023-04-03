@@ -11,8 +11,11 @@
   text-decoration: none;
   color: rgb(255, 255, 255);
   font-family: 'Montserrat', sans-serif;
+
 }
 
 body {
   background-color: #101622f0;
+  overflow-x: hidden;
+  height: 100vw;
 }

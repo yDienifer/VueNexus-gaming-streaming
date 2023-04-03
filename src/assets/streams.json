@@ -226,7 +226,7 @@
        },
        {
           "id":5,
-          "fotoDaCapaDaLive":"/public/static/img/stream_cover/overlays_reference.png",
+          "":"/public/static/img/stream_cover/overlays_reference.png",
           "altDaImgDeCapaDaLive":"Live 5",
           "tituloDaLive":"Mind-Blowing Plays: Breaking Down the Best Valorant Clutches and Comebacks",
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile1.png",
