@@ -7,7 +7,8 @@
           "tituloDaLive":"The Ultimate Showdown: Valorant's Top Ranked Players Battle It Out!",
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile.png",
           "altDaFotoDePerfilDoStreamer":"AgentAce",
-          "nomeDoStreamer":"AgentAce"
+          "nomeDoStreamer":"AgentAce",
+          "tipoDeLive": "Live"
        },
        {
           "id":2,
@@ -16,7 +17,8 @@
           "tituloDaLive":"Climbing the Ranks: Tips and Tricks to Reach the Top of Valorant",
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile2.png",
           "altDaFotoDePerfilDoStreamer":"ValorantQueen",
-          "nomeDoStreamer":"ValorantQueen"
+          "nomeDoStreamer":"ValorantQueen",
+          "tipoDeLive": "Live"
        },
        {
           "id":3,
@@ -25,7 +27,8 @@
           "tituloDaLive":"Unstoppable: The Best Ranked Matches of the Week",
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile3.png",
           "altDaFotoDePerfilDoStreamer":"TheViperShooter",
-          "nomeDoStreamer":"TheViperShooter"
+          "nomeDoStreamer":"TheViperShooter",
+          "tipoDeLive": "Live" 
        },
        {
           "id":4,
@@ -34,7 +37,8 @@
           "tituloDaLive":"From Silver to Diamond: One Player's Journey Through Valorant's Ranked System",
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile4.png",
           "altDaFotoDePerfilDoStreamer":"SpikeSlayer",
-          "nomeDoStreamer":"SpikeSlayer"
+          "nomeDoStreamer":"SpikeSlayer",
+          "tipoDeLive": "Replay"
        },
        {
           "id":5,
@@ -43,7 +47,8 @@
           "tituloDaLive":"Tensions Run High in Valorant's Most Intense Ranked Matches",
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile5.png",
           "altDaFotoDePerfilDoStreamer":"CypherTheSpy",
-          "nomeDoStreamer":"CypherTheSpy"
+          "nomeDoStreamer":"CypherTheSpy",
+          "tipoDeLive": "Replay"
        }
     ],
     "CasualMatches":[
@@ -54,7 +59,8 @@
           "tituloDaLive":"Chilling and Fragging: Casual Matches with Friends",
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile6.png",
           "altDaFotoDePerfilDoStreamer":"PhoenixFireball",
-          "nomeDoStreamer":"PhoenixFireball"
+          "nomeDoStreamer":"PhoenixFireball",
+          "tipoDeLive": "Replay"
        },
        {
           "id":2,
@@ -63,7 +69,8 @@
           "tituloDaLive":"Relaxing with Valorant: Casual Matches with Fun Comps",
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile7.png",
           "altDaFotoDePerfilDoStreamer":"SageTheHealer",
-          "nomeDoStreamer":"SageTheHealer"
+          "nomeDoStreamer":"SageTheHealer",
+          "tipoDeLive": "Live"
        },
        {
           "id":3,
@@ -72,7 +79,8 @@
           "tituloDaLive":"Casual Frenzy: The Best Casual Matches of the Week",
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile8.png",
           "altDaFotoDePerfilDoStreamer":"RazeTheRoamer",
-          "nomeDoStreamer":"RazeTheRoamer"
+          "nomeDoStreamer":"RazeTheRoamer",
+          "tipoDeLive": "Live"
        },
        {
           "id":4,
@@ -81,7 +89,8 @@
           "tituloDaLive":"Off-Meta Fun: Trying Out New Comps in Casual Matches",
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile9.png",
           "altDaFotoDePerfilDoStreamer":"JettTheAssassin",
-          "nomeDoStreamer":"JettTheAssassin"
+          "nomeDoStreamer":"JettTheAssassin",
+          "tipoDeLive": "Replay"
        },
        {
           "id":5,
@@ -90,7 +99,8 @@
           "tituloDaLive":"Let's Just Have Fun: A Casual Match Community Event",
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile10.png",
           "altDaFotoDePerfilDoStreamer":"BrimstoneTheCommander",
-          "nomeDoStreamer":"BrimstoneTheCommander"
+          "nomeDoStreamer":"BrimstoneTheCommander",
+          "tipoDeLive": "Live"
        }
     ],
     "Tutorials":[

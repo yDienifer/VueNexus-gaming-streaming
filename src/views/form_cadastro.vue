@@ -1,5 +1,4 @@
 <template>
-  <layoutCadastroConta>
     <form>
       <span>Challenge your limits - Create your account now</span>
       <input id="nomeDoUsuario" name="nomeDoUsuario" type="text" placeholder="Enter your username" required>
@@ -7,7 +6,6 @@
       <input id="emailDoUsuario" name="emailDoUsuario" placeholder="Enter your email here" type="email" required>
       <span>Já é um membro?</span>
     </form>
-  </layoutCadastroConta>
 </template>
 
 <script lang="ts">

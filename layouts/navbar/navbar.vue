@@ -4,54 +4,10 @@ import "@fortawesome/fontawesome-free/css/all.css";
 import InputDePesquisa from "./Input_de_pesquisa/input_de_pesquisa.vue";
 </script>
 
-<template>
-  <header>
-    <div class="logoVueNexusContainer">
-      <i class="fa-solid fa-spa"></i>
-      <p>VueNexus</p>
-    </div>
-    <InputDePesquisa />
-    <nav id="nav-para-desktop">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Lives</a></li>
-        <li><a href="#">Streams</a></li>
-        <i class="fa-regular fa-bell"></i>
-        <i class="fa-solid fa-user-ninja"></i>
-      </ul>
-      <div class="contaDoUsuarioDesktop"></div>
-    </nav>
-    <nav id="nav-para-mobile" :class="{ show: menu_aberto }">
-      <div
-        class="hamburguer"
-        :class="{ show: menu_aberto }"
-        @click="animacaoMenuMobile"
-      >
-        <div class="linha-1"></div>
-        <div class="linha-2"></div>
-        <div class="linha-3"></div>
-      </div>
-      <aside
-        id="sidemenu-para-mobile"
-        :class="{ show: menu_aberto }"
-        @click="animacaoMenuMobile"
-      >
-        <section id="conta-do-usuario">
-          <i class="fa-solid fa-user-ninja"></i>
-          <span>Sign in</span>
-          <span>Sign up</span>
-        </section>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Streams</a></li>
-          <li><a href="#">Streamers</a></li>
-        </ul>
-      </aside>
-    </nav>
-  </header>
-</template>
-
 <script lang="ts">
+
+
+
 export default {
   name: "BarraDeNavegacao",
   components: {
@@ -91,6 +47,48 @@ export default {
   },
 };
 </script>
+
+<template>
+  <header>
+    <div class="logoVueNexusContainer">
+      <i class="fa-solid fa-spa"></i>
+      <p>VueNexus</p>
+    </div>
+    <InputDePesquisa />
+    <nav id="nav-para-desktop">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Lives</a></li>
+        <li><a href="#">Streams</a></li>
+        <i class="fa-regular fa-bell"></i>
+        <router-link to="/conta"><i class="fa-solid fa-user-ninja"></i></router-link>
+        <router-view />
+      </ul>
+      <div class="contaDoUsuarioDesktop"></div>
+    </nav>
+    <nav id="nav-para-mobile" :class="{ show: menu_aberto }">
+      <div class="hamburguer" :class="{ show: menu_aberto }" @click="animacaoMenuMobile">
+        <div class="linha-1"></div>
+        <div class="linha-2"></div>
+        <div class="linha-3"></div>
+      </div>
+      <aside id="sidemenu-para-mobile" :class="{ show: menu_aberto }" @click="animacaoMenuMobile">
+        <section id="conta-do-usuario">
+          <i class="fa-solid fa-user-ninja"></i>
+          <span>Sign in</span>
+          <span>Sign up</span>
+        </section>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Streams</a></li>
+          <li><a href="#">Streamers</a></li>
+        </ul>
+      </aside>
+    </nav>
+  </header>
+</template>
+
+
 
 <style scoped>
 header {
@@ -137,7 +135,7 @@ header .logoVueNexusContainer p::first-letter {
   color: var(--cor-folly);
 }
 
-.header .logoVueNexusContainer i p {
+header .logoVueNexusContainer i p {
   display: inline-block;
   width: 100%;
 }
@@ -305,6 +303,7 @@ header nav {
     display: flex;
     flex-direction: row-reverse;
   }
+
   header .logoVueNexusContainer p {
     display: none;
   }
@@ -323,6 +322,7 @@ header nav {
   header #logoVueNexus {
     display: none;
   }
+
   header {
     clip-path: none;
     padding: 20px;
