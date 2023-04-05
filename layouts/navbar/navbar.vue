@@ -88,8 +88,6 @@ export default {
   </header>
 </template>
 
-
-
 <style scoped>
 header {
   display: flex;

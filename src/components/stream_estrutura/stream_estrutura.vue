@@ -85,6 +85,7 @@ export default defineComponent({
     text-align: center;
     padding: 8px;
     border-radius: 5px;
+    font-size: clamp(12px, 3vw, 16px);
 }
 
 .informacoes-da-live span {
@@ -94,6 +95,7 @@ export default defineComponent({
     -webkit-box-orient: vertical;
     overflow: hidden;
     margin-top: 10px;
+    font-size: clamp(14px, 3vw, 18px);
 }
 
 .perfilDoStreamer {
@@ -102,17 +104,38 @@ export default defineComponent({
     align-items: center;
 }
 
+.perfilDoStreamer span {
+    font-size: clamp(12px, 3vw, 16px);
+}
+
 .perfilDoStreamer img {
     width: 15%;
     margin-right: 10px;
 }
 
-
-
-@media (max-width: 425px) {
-    .container-stream {
-        width: 10em;
-    }
+.tagsDaLive li {
+    background-color: rgba(129, 129, 129, 0.295);
+    width: 50%;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 50px;
 }
 
+@media (max-width: 768px) {
+    .informacoes-da-live span:nth-of-type(2) {
+        width: 50%;
+    }
+    .tagsDaLive li {
+    width: 80%;
+}
+}
+
+@media (max-width: 768px) {
+    .container-stream {
+        width: 13em;
+    }
+}
 </style>

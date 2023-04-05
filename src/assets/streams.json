@@ -8,6 +8,7 @@
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile.png",
           "altDaFotoDePerfilDoStreamer":"AgentAce",
           "nomeDoStreamer":"AgentAce",
+          "nomeDaTag": "Ranked Matches",
           "tipoDeLive": "Live"
        },
        {
@@ -18,6 +19,7 @@
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile2.png",
           "altDaFotoDePerfilDoStreamer":"ValorantQueen",
           "nomeDoStreamer":"ValorantQueen",
+          "nomeDaTag": "Ranked Matches",
           "tipoDeLive": "Live"
        },
        {
@@ -28,6 +30,7 @@
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile3.png",
           "altDaFotoDePerfilDoStreamer":"TheViperShooter",
           "nomeDoStreamer":"TheViperShooter",
+          "nomeDaTag": "Ranked Matches",
           "tipoDeLive": "Live" 
        },
        {
@@ -38,6 +41,7 @@
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile4.png",
           "altDaFotoDePerfilDoStreamer":"SpikeSlayer",
           "nomeDoStreamer":"SpikeSlayer",
+          "nomeDaTag": "Ranked Matches",
           "tipoDeLive": "Replay"
        },
        {
@@ -48,6 +52,7 @@
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile5.png",
           "altDaFotoDePerfilDoStreamer":"CypherTheSpy",
           "nomeDoStreamer":"CypherTheSpy",
+          "nomeDaTag": "Ranked Matches",
           "tipoDeLive": "Replay"
        }
     ],
@@ -60,6 +65,7 @@
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile6.png",
           "altDaFotoDePerfilDoStreamer":"PhoenixFireball",
           "nomeDoStreamer":"PhoenixFireball",
+          "nomeDaTag": "Casual Matches",
           "tipoDeLive": "Replay"
        },
        {
@@ -70,6 +76,7 @@
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile7.png",
           "altDaFotoDePerfilDoStreamer":"SageTheHealer",
           "nomeDoStreamer":"SageTheHealer",
+          "nomeDaTag": "Casual Matches",
           "tipoDeLive": "Live"
        },
        {
@@ -80,6 +87,7 @@
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile8.png",
           "altDaFotoDePerfilDoStreamer":"RazeTheRoamer",
           "nomeDoStreamer":"RazeTheRoamer",
+          "nomeDaTag": "Casual Matches",
           "tipoDeLive": "Live"
        },
        {
@@ -90,6 +98,7 @@
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile9.png",
           "altDaFotoDePerfilDoStreamer":"JettTheAssassin",
           "nomeDoStreamer":"JettTheAssassin",
+          "nomeDaTag": "Casual Matches",
           "tipoDeLive": "Replay"
        },
        {
@@ -100,6 +109,7 @@
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile10.png",
           "altDaFotoDePerfilDoStreamer":"BrimstoneTheCommander",
           "nomeDoStreamer":"BrimstoneTheCommander",
+          "nomeDaTag": "Casual Matches",
           "tipoDeLive": "Live"
        }
     ],
@@ -111,7 +121,9 @@
           "tituloDaLive":"Learn from the Pros: Mastering Agent Abilities",
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile11.png",
           "altDaFotoDePerfilDoStreamer":"OmenTheShrouded",
-          "nomeDoStreamer":"OmenTheShrouded"
+          "nomeDoStreamer":"OmenTheShrouded",
+          "nomeDaTag": "Tutorials",
+          "tipoDeLive": "Live"
        },
        {
           "id":2,
@@ -120,7 +132,9 @@
           "tituloDaLive":"Tips and Tricks: How to Improve Your Aim in Valorant",
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile12.png",
           "altDaFotoDePerfilDoStreamer":"KilljoyTheEngineer",
-          "nomeDoStreamer":"KilljoyTheEngineer"
+          "nomeDoStreamer":"KilljoyTheEngineer",
+          "nomeDaTag": "Tutorials",
+          "tipoDeLive": "Live"
        },
        {
           "id":3,
@@ -129,7 +143,9 @@
           "tituloDaLive":"Becoming a Valorant Pro: Positioning and Movement Techniques",
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile1.png",
           "altDaFotoDePerfilDoStreamer":"ReynaTheEmpress",
-          "nomeDoStreamer":"ReynaTheEmpress"
+          "nomeDoStreamer":"ReynaTheEmpress",
+          "nomeDaTag": "Tutorials",
+          "tipoDeLive": "Live"
        },
        {
           "id":4,
@@ -138,7 +154,9 @@
           "tituloDaLive":"Rushing and Defending: Winning Strategies for Each Map",
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile2.png",
           "altDaFotoDePerfilDoStreamer":"SkyeTheEcoWarrior",
-          "nomeDoStreamer":"SkyeTheEcoWarrior"
+          "nomeDoStreamer":"SkyeTheEcoWarrior",
+          "nomeDaTag": "Tutorials",
+          "tipoDeLive": "Replay"
        },
        {
           "id":5,
@@ -147,7 +165,9 @@
           "tituloDaLive":"Top Tier Tactics: The Best Tips from Professional Valorant Players",
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile3.png",
           "altDaFotoDePerfilDoStreamer":"ViperTheToxicologist",
-          "nomeDoStreamer":"ViperTheToxicologist"
+          "nomeDoStreamer":"ViperTheToxicologist",
+          "nomeDaTag": "Tutorials",
+          "tipoDeLive": "Live"
        }
     ],
     "PlayingWithViewers":[
@@ -158,7 +178,9 @@
           "tituloDaLive":"Interacting with the Community: Live Valorant Matches with Fans",
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile4.png",
           "altDaFotoDePerfilDoStreamer":"AceOfValorant",
-          "nomeDoStreamer":"AceOfValorant"
+          "nomeDoStreamer":"AceOfValorant",
+          "nomeDaTag": "Playing With Viewers",
+          "tipoDeLive": "Live"
        },
        {
           "id":2,
@@ -167,7 +189,9 @@
           "tituloDaLive":"Community Plays: Epic Moments from Viewer Games",
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile5.png",
           "altDaFotoDePerfilDoStreamer":"BladeMaster",
-          "nomeDoStreamer":"BladeMaster"
+          "nomeDoStreamer":"BladeMaster",
+          "nomeDaTag": "Playing With Viewers",
+          "tipoDeLive": "Live"
        },
        {
           "id":3,
@@ -176,7 +200,9 @@
           "tituloDaLive":"Friendly Competition: Viewer Tournaments in Valorant",
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile6.png",
           "altDaFotoDePerfilDoStreamer":"TheValorantGuru",
-          "nomeDoStreamer":"TheValorantGuru"
+          "nomeDoStreamer":"TheValorantGuru",
+          "nomeDaTag": "Playing With Viewers",
+          "tipoDeLive": "Live"
        },
        {
           "id":4,
@@ -185,7 +211,9 @@
           "tituloDaLive":"Team Up with Viewers: Playing Unranked Games Together",
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile7.png",
           "altDaFotoDePerfilDoStreamer":"TheSneakySova",
-          "nomeDoStreamer":"TheSneakySova"
+          "nomeDoStreamer":"TheSneakySova",
+          "nomeDaTag": "Playing With Viewers",
+          "tipoDeLive": "Replay"
        },
        {
           "id":5,
@@ -194,7 +222,9 @@
           "tituloDaLive":"Streamers vs. Viewers: The Ultimate Battle for Bragging Rights",
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile8.png",
           "altDaFotoDePerfilDoStreamer":"FlashbangFrenzy",
-          "nomeDoStreamer":"FlashbangFrenzy"
+          "nomeDoStreamer":"FlashbangFrenzy",
+          "nomeDaTag": "Playing With Viewers",
+          "tipoDeLive": "Replay"
        }
     ],
     "Competitions":[
@@ -205,7 +235,9 @@
           "tituloDaLive":"Unraveling the Game: In-Depth Analysis of Valorant Matches",
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile9.png",
           "altDaFotoDePerfilDoStreamer":"TheUltimateJett",
-          "nomeDoStreamer":"TheUltimateJett"
+          "nomeDoStreamer":"TheUltimateJett",
+          "nomeDaTag": "Competitions",
+          "tipoDeLive": "Replay"
        },
        {
           "id":2,
@@ -214,7 +246,9 @@
           "tituloDaLive":"Dissecting Gameplay: The Best Moments from Valorant Matches",
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile10.png",
           "altDaFotoDePerfilDoStreamer":"TheReconDrone",
-          "nomeDoStreamer":"TheReconDrone"
+          "nomeDoStreamer":"TheReconDrone",
+          "nomeDaTag": "Competitions",
+          "tipoDeLive": "Replay"
        },
        {
           "id":3,
@@ -223,7 +257,9 @@
           "tituloDaLive":"Secrets of Professional Plays: Expert Analysis of Pro Team Strategies",
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile11.png",
           "altDaFotoDePerfilDoStreamer":"TheMolotovMaven",
-          "nomeDoStreamer":"TheMolotovMaven"
+          "nomeDoStreamer":"TheMolotovMaven",
+          "nomeDaTag": "Competitions",
+          "tipoDeLive": "Live"
        },
        {
           "id":4,
@@ -232,7 +268,9 @@
           "tituloDaLive":"Strategic Genius: Analyzing the Mindset of Top Valorant Players",
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile12.png",
           "altDaFotoDePerfilDoStreamer":"TheSharpshooter",
-          "nomeDoStreamer":"TheSharpshooter"
+          "nomeDoStreamer":"TheSharpshooter",
+          "nomeDaTag": "Competitions",
+          "tipoDeLive": "Live"
        },
        {
           "id":5,
@@ -241,7 +279,9 @@
           "tituloDaLive":"Mind-Blowing Plays: Breaking Down the Best Valorant Clutches and Comebacks",
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile1.png",
           "altDaFotoDePerfilDoStreamer":"TheTacticalBrimstone",
-          "nomeDoStreamer":"TheTacticalBrimstone"
+          "nomeDoStreamer":"TheTacticalBrimstone",
+          "nomeDaTag": "Competitions",
+          "tipoDeLive": "Replay"
        }
     ],
     "Challenges":[
@@ -252,7 +292,9 @@
           "tituloDaLive":"Pushing the Limits: Epic Valorant Challenges",
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile2.png",
           "altDaFotoDePerfilDoStreamer":"TheUltimateJett",
-          "nomeDoStreamer":"TheUltimateJett"
+          "nomeDoStreamer":"TheUltimateJett",
+          "nomeDaTag": "Challenges",
+          "tipoDeLive": "Replay"
        },
        {
           "id":2,
@@ -261,7 +303,9 @@
           "tituloDaLive":"Creative Challenges: Trying Out New Playstyles in Valorant",
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile3.png",
           "altDaFotoDePerfilDoStreamer":"TheToxicViper",
-          "nomeDoStreamer":"TheToxicViper"
+          "nomeDoStreamer":"TheToxicViper",
+          "nomeDaTag": "Challenges",
+          "tipoDeLive": "Live"
        },
        {
           "id":3,
@@ -270,7 +314,9 @@
           "tituloDaLive":"Fun with Friends: Hilarious Valorant Challenges with Friends",
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile4.png",
           "altDaFotoDePerfilDoStreamer":"TheEcoWarrior",
-          "nomeDoStreamer":"TheEcoWarrior"
+          "nomeDoStreamer":"TheEcoWarrior",
+          "nomeDaTag": "Challenges",
+          "tipoDeLive": "Live"
        },
        {
           "id":4,
@@ -279,7 +325,9 @@
           "tituloDaLive":"The Ultimate Challenge: Trying to Win a Game Without Firing a Single Shot",
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile5.png",
           "altDaFotoDePerfilDoStreamer":"TheImperialReyna",
-          "nomeDoStreamer":"TheImperialReyna"
+          "nomeDoStreamer":"TheImperialReyna",
+          "nomeDaTag": "Challenges",
+          "tipoDeLive": "Live"
        },
        {
           "id":5,
@@ -288,7 +336,9 @@
           "tituloDaLive":"The Ultimate Showdown: Players Face Off in the Most Difficult Valorant Challenges",
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile6.png",
           "altDaFotoDePerfilDoStreamer":"TheTiltProof",
-          "nomeDoStreamer":"TheTiltProof"
+          "nomeDoStreamer":"TheTiltProof",
+          "nomeDaTag": "Challenges",
+          "tipoDeLive": "Replay"
        }
     ],
     "News":[
@@ -299,7 +349,9 @@
           "tituloDaLive":"The Latest Updates: New Agents, Maps, and More",
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile2.png",
           "altDaFotoDePerfilDoStreamer":"TheRazeMain",
-          "nomeDoStreamer":"TheRazeMain"
+          "nomeDoStreamer":"TheRazeMain",
+          "nomeDaTag": "News",
+          "tipoDeLive": "Live"
        },
        {
           "id":2,
@@ -308,7 +360,9 @@
           "tituloDaLive":"Discover What's New: A Look at the Latest Valorant Patches",
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile3.png",
           "altDaFotoDePerfilDoStreamer":"ThePhoenixPhoenix",
-          "nomeDoStreamer":"ThePhoenixPhoenix"
+          "nomeDoStreamer":"ThePhoenixPhoenix",
+          "nomeDaTag": "News",
+          "tipoDeLive": "Live"
        },
        {
           "id":3,
@@ -317,7 +371,9 @@
           "tituloDaLive":"Breaking News: Major Changes Coming to Valorant's Ranked System",
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile4.png",
           "altDaFotoDePerfilDoStreamer":"TheSageSavior",
-          "nomeDoStreamer":"TheSageSavior"
+          "nomeDoStreamer":"TheSageSavior",
+          "nomeDaTag": "News",
+          "tipoDeLive": "Replay"
        },
        {
           "id":4,
@@ -326,7 +382,9 @@
           "tituloDaLive":"What's Next for Valorant? A Sneak Peek into Future Updates",
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile5.png",
           "altDaFotoDePerfilDoStreamer":"TheKillJoy",
-          "nomeDoStreamer":"TheKillJoy"
+          "nomeDoStreamer":"TheKillJoy",
+          "nomeDaTag": "News",
+          "tipoDeLive": "Replay"
        },
        {
           "id":5,
@@ -335,7 +393,9 @@
           "tituloDaLive":"Insider Info: Behind-the-Scenes Look at Valorant's Development Process",
           "fotoDePerfilDoStreamer":"/public/static/img/profile_icons/icon_profile6.png",
           "altDaFotoDePerfilDoStreamer":"TheOpMaster",
-          "nomeDoStreamer":"TheOpMaster"
+          "nomeDoStreamer":"TheOpMaster",
+          "nomeDaTag": "News",
+          "tipoDeLive": "Live"
        }
     ]
  }
