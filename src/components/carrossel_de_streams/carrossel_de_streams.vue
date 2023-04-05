@@ -3,8 +3,8 @@
         <i class="fa-solid fa-left-long" @click="btnVoltar"></i>
         <i class="fa-solid fa-right-long" @click="btnAvancar"></i>
     </div>
-    <div class="carrossel" ref="carrossel">
-        <div class="streams-container">
+    <div class="carrosselContainer">
+        <div class="streams-container" ref="carrossel">
             <div class="video" v-for="(match, index) in streams" :key="index">
                 <videoStreamEstrutura :fotoDaCapaDaLive="match.fotoDaCapaDaLive"
                     :altDaImgDeCapaDaLive="match.altDaImgDeCapaDaLive" :tituloDaLive="match.tituloDaLive"
@@ -17,7 +17,7 @@
 </template>
   
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, ref } from 'vue';
 import videoStreamEstrutura from "../../components/stream_estrutura/stream_estrutura.vue";
 
 export default defineComponent({
@@ -31,21 +31,32 @@ export default defineComponent({
             required: true
         }
     },
-    methods: {
-        btnVoltar(e: Event) {
+    setup() { 
+        const carrossel = ref(null);
+
+        const btnVoltar = (e: Event) => {
             e.preventDefault();
-            const carrossel = this.$refs.carrossel as HTMLElement;
-            if (carrossel.offsetWidth) {
-                carrossel.scrollLeft -= carrossel.offsetWidth;
+            console.log("botão de voltar clicado!")
+            const carrosselElement = carrossel.value! as HTMLElement;
+            if (carrosselElement.offsetWidth) {
+                carrosselElement.scrollLeft -= carrosselElement.offsetWidth;
             }
-        },
-        btnAvancar(e: Event) {
+        }
+
+        const btnAvancar = (e: Event) => {
             e.preventDefault();
-            const carrossel = this.$refs.carrossel as HTMLElement;
-            if (carrossel.offsetWidth) {
-                carrossel.scrollLeft += carrossel.offsetWidth;
+            console.log("botão de avançar clicado!")
+            const carrosselElement = carrossel.value! as HTMLElement;
+            if (carrosselElement.offsetWidth) {
+                carrosselElement.scrollLeft += carrosselElement.offsetWidth;
             }
-        },
+        }
+
+        return {
+            btnVoltar,
+            btnAvancar,
+            carrossel
+        }
     },
 });
 </script>
@@ -66,6 +77,7 @@ export default defineComponent({
 
 .streams-container .video {
     margin: 5px 0 0 10px;
+    width: 100vw;
 }
 
 .btns-do-carrossel {

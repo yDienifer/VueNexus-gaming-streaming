@@ -3,12 +3,15 @@ import botaoDeRedimensionamento from "../botao/botao.vue";
 </script>
 
 <template>
-    <div class="bannerContainer">
+    <div class="bannerContainer"><video autoplay muted loop>
+            <source src="../../../public/static/video/BowedAcademicJenny.mp4" type="video/mp4" />
+        </video>
         <div id="bannerBackground"></div>
         <div class="conteudoDoBanner">
-            <h1>Watch the most exciting Valorant matches in real-time.</h1>
+
+            <h1>Experience the adrenaline of Valorant's best plays</h1>
             <!-- Adiciona um scroll reveal aq -->
-            <botaoDeRedimensionamento id="btn" titulo-introdutorio-do-btn="Meet the streamers" />
+            <botaoDeRedimensionamento id="btn" titulo-introdutorio-do-btn="Get in on the Action" />
         </div>
     </div>
 </template>
@@ -32,21 +35,14 @@ export default defineComponent({
     width: 79%;
     position: relative;
     z-index: -2;
-}
-
-#bannerBackground {
-    background-image: url(/public/static/img/banner/banner.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    opacity: 0.9;
-    filter: grayscale(0.5);
-    width: 100vw;
-    height: 950px;
-    position: absolute;
     border-radius: 10px;
-    z-index: -1;
 }
 
+video {
+    filter: grayscale(0.3);
+    opacity: 0.5;
+    border-radius: 10px;
+}
 
 .conteudoDoBanner {
     position: absolute;
@@ -76,7 +72,8 @@ export default defineComponent({
     }
 
     #bannerBackground {
-        background-size: 72%;
+        
+        
     }
 }
 
@@ -85,7 +82,20 @@ export default defineComponent({
         width: 88vw;
     }
 
+    video {
+        display: none;
+    }
+
     #bannerBackground {
+        background-image: url(/public/static/img/banner/banner.png);background-repeat: no-repeat;
+        background-size: 72%;
+        opacity: 0.6;
+        filter: grayscale(0.5);
+        width: 100vw;
+        height: 950px;
+        position: absolute;
+        border-radius: 10px;
+        z-index: -1;
         background-size: 88%;
     }
 }
