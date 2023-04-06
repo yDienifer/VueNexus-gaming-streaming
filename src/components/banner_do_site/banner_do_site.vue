@@ -31,17 +31,17 @@ export default defineComponent({
 .bannerContainer {
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
-    width: 79%;
+    margin-top: 20px;
+    width: 77%;
     position: relative;
     z-index: -2;
-    border-radius: 10px;
 }
 
 video {
     filter: grayscale(0.3);
     opacity: 0.5;
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .conteudoDoBanner {
@@ -68,35 +68,13 @@ video {
 
 @media (max-width: 1024px) {
     .bannerContainer {
-        width: 72vw;
-    }
-
-    #bannerBackground {
-        
-        
+        width: 70vw;
     }
 }
 
 @media (max-width: 768px) {
     .bannerContainer {
-        width: 88vw;
-    }
-
-    video {
-        display: none;
-    }
-
-    #bannerBackground {
-        background-image: url(/public/static/img/banner/banner.png);background-repeat: no-repeat;
-        background-size: 72%;
-        opacity: 0.6;
-        filter: grayscale(0.5);
-        width: 100vw;
-        height: 950px;
-        position: absolute;
-        border-radius: 10px;
-        z-index: -1;
-        background-size: 88%;
+        width: 98vw;
     }
 }
 
@@ -115,11 +93,22 @@ video {
     }
 
     #bannerBackground {
-        background-image: url(/public/static/img/banner/banner.png);
+        background-image: url(/public/static/img/banner/banner.png);background-repeat: no-repeat;
+        opacity: 0.6;
+        filter: grayscale(0.5);
+        width: 100vw;
+        height: 950px;
+        position: absolute;
+        border-radius: 10px;
+        z-index: -1;
+        background-size: 88%;
         background-size: 310%;
         background-position: -200px 0;
         background-repeat: no-repeat;
         border-radius: 0;
+    }
+    video {
+        display: none;
     }
 }
 

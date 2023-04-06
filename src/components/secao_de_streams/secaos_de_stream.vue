@@ -90,7 +90,7 @@ export default defineComponent({
 
 section {
     margin-top: 100px;
-    width: 79%;
+    width: 77%;
     height: 100vw;
     padding: 10px 1.5rem 0 0;
 }
@@ -106,14 +106,14 @@ section:nth-of-type(7) {
 
 @media (max-width: 1024px) {
     section {
-        width: 72vw;
+        width: 70vw;
     }
 }
 
 @media (max-width: 768px) {
     section {
-        width: 88vw;
-        margin-top: 450px;
+        width: 98vw;
+        margin-top: 80px;
         height: 100vw;
         padding: 10px 1.5rem 0 0;
     }

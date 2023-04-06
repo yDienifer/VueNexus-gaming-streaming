@@ -1,12 +1,11 @@
 <script setup lang="ts">
+import { RouterLink, RouterView } from 'vue-router'
 import "@fortawesome/fontawesome-free/css/all.css";
 
 import InputDePesquisa from "./Input_de_pesquisa/input_de_pesquisa.vue";
 </script>
 
 <script lang="ts">
-
-
 
 export default {
   name: "BarraDeNavegacao",
@@ -60,9 +59,11 @@ export default {
         <li><a href="#">Home</a></li>
         <li><a href="#">Lives</a></li>
         <li><a href="#">Streams</a></li>
-        <i class="fa-regular fa-bell"></i>
-        <router-link to="/conta"><i class="fa-solid fa-user-ninja"></i></router-link>
-        <router-view />
+        <div class="contaDoUsuario">
+          <i class="fa-regular fa-bell" id="iconNotificacoes"></i>
+          <RouterLink to="/conta"><i class="fa-solid fa-user-ninja" id="iconConta"></i></RouterLink>
+        </div>
+        <RouterView />
       </ul>
       <div class="contaDoUsuarioDesktop"></div>
     </nav>
@@ -97,7 +98,6 @@ header {
   width: 100vw;
   padding: 20px 65px;
   position: relative;
-  clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
 }
 
 header::before {
@@ -180,16 +180,20 @@ header nav {
   margin: 0;
 }
 
-#nav-para-desktop i {
+#nav-para-desktop .contaDoUsuario i {
   margin-left: 20px;
   border-left: 1px solid rgba(255, 255, 255, 0.582);
   padding-left: 25px;
   cursor: pointer;
 }
 
-#nav-para-desktop i:nth-of-type(2) {
-  border-left: none;
-  margin: 0;
+#nav-para-desktop .contaDoUsuario #iconConta {
+  border: none;
+  margin-left: 0;
+}
+
+#nav-para-desktop .contaDoUsuario #iconNotificacoes {
+  font-size: 21px;
 }
 
 #nav-para-desktop ul li:after {
@@ -246,7 +250,6 @@ header nav {
   width: 50%;
   border-bottom-right-radius: 5px;
   transition: all 0.8s;
-  z-index: 1;
 }
 
 #nav-para-mobile #conta-do-usuario {
@@ -300,6 +303,7 @@ header nav {
   header {
     display: flex;
     flex-direction: row-reverse;
+    clip-path: none;
   }
 
   header .logoVueNexusContainer p {

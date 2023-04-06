@@ -2,20 +2,28 @@
     <aside class="menu-lateral-container">
         <section class="secao-descubra">
             <span>Discover</span>
-            <ul class="descubra-atalhos">
+            <ul class="atalhos-da-secao">
                 <li><a href="#"><i class="fa-solid fa-tv"></i>Popular streams</a></li>
                 <li><a href="#"><i class="fa-solid fa-person-rifle"></i>Recommended streamers</a></li>
                 <li><a href="#"><i class="fa-solid fa-newspaper"></i>Newest updates</a></li>
                 <li><a href="#"><i class="fa-regular fa-calendar-days"></i>Live events</a></li>
             </ul>
         </section>
-        <section class="secao-descubra">
-            <span>Discover</span>
-            <ul class="descubra-atalhos">
-                <li><i class="fa-solid fa-tv"></i><a href="#">Popular streams</a></li>
-                <li><i class="fa-solid fa-person-rifle"></i><a href="#">Recommended streamers</a></li>
-                <li><i class="fa-solid fa-newspaper"></i><a href="#">Newest updates</a></li>
-                <li><i class="fa-regular fa-calendar-days"></i><a href="#">Live events</a></li>
+        <section class="secao-forum-da-comunidade">
+            <span>Community Forum</span>
+            <ul class="atalhos-da-secao">
+                <li><i class="fa-solid fa-chess"></i><a href="#">Strategies and Tactics</a></li>
+                <li><i class="fa-solid fa-comment-dots"></i><a href="#">Feedback and Suggestions</a></li>
+                <li><i class="fa-solid fa-hammer"></i><a href="#">Community and Events</a></li>
+            </ul>
+        </section>
+        <section class="secao-guias-de-jogo">
+            <span>Game Guides</span>
+            <ul class="atalhos-da-secao">
+                <li><i class="fa-solid fa-book-open"></i><a href="#">Beginner's Guide</a></li>
+                <li><i class="fa-solid fa-thumbs-up"></i><a href="#">Advanced Tips</a></li>
+                <li><i class="fa-solid fa-user-ninja"></i><a href="#">Agent Guides</a></li>
+                <li><i class="fa-solid fa-trophy"></i><a href="#">Achievements and Rewards</a></li>
             </ul>
         </section>
     </aside>
@@ -37,7 +45,7 @@ export default defineComponent({
     align-items: center;
     margin: 0 auto;
     position: absolute;
-    top: 87px;
+    margin-top: 20px;
     left: 5px;
     height: 100%;
     float: left;
@@ -53,7 +61,6 @@ export default defineComponent({
     right: 0;
     bottom: 0;
     background-color: rgba(20, 20, 20, 0.968);
-    /* Cor preta com opacidade de 0.5 */
     z-index: -1;
 }
 
@@ -71,15 +78,16 @@ export default defineComponent({
     z-index: -2;
 }
 
-.descubra-atalhos i {
+.atalhos-da-secao i {
     margin: 15px 5px 0 0;
 }
 
-.descubra-atalhos li {
+.atalhos-da-secao li {
     font-size: clamp(14px, 2vw, 15px);
 }
 
-.descubra-atalhos {
+section .atalhos-da-secao:nth-of-type(1),
+section .atalhos-da-secao:nth-of-type(2) {
     border-bottom: 1px solid #7d7d7d5a;
     padding-bottom: 20px;
 }
@@ -119,19 +127,8 @@ span:hover::after {
 }
 
 @media (max-width: 768px) {
-    .descubra-atalhos a {
+    .menu-lateral-container {
         display: none;
-    }
-
-    span {
-        display: none;
-    }
-
-    .descubra-atalhos {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border-bottom: none;
     }
 }
 

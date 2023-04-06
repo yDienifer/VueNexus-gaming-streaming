@@ -1,15 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import formCadastro from '@/views/form_cadastro.vue'
-
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-     {
+    {
       path: '/conta',
-      name: 'Conta',
-      component: formCadastro,
-    } 
+      name: 'conta',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/layoutConta.vue')
+    }
   ]
 })
 
