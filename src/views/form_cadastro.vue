@@ -24,7 +24,7 @@ export default defineComponent({
 
     const fetchStatus = () => api.get("/val/status/v1/platform-data", {
       params: {
-        api_key: "RGAPI-cd0b8f16-e514-48cc-85a7-dd1753e00f7a",
+        api_key: "",
       },
     }).then((response) => (status.value =
       response.data.results));
