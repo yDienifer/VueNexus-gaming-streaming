@@ -1,54 +1,61 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import "@fortawesome/fontawesome-free/css/all.css";
-
-import InputDePesquisa from "./Input_de_pesquisa/input_de_pesquisa.vue";
-</script>
-
 <script lang="ts">
+import { ref, watchEffect } from 'vue';
+import { useRoute } from 'vue-router'
+;import { RouterLink, RouterView } from 'vue-router'
+import "@fortawesome/fontawesome-free/css/all.css";
+import InputDePesquisa from "./Input_de_pesquisa/input_de_pesquisa.vue";
 
 export default {
   name: "BarraDeNavegacao",
   components: {
     InputDePesquisa,
   },
-  data() {
-    return {
-      input_name: "",
-      menu_aberto: false,
-      sidebar_aberta: false,
-    };
-  },
-  methods: {
-    // Responsável por funções da aplicação
-    animacaoMenuMobile(): void {
-      this.menu_aberto = !this.menu_aberto;
-      this.sidebar_aberta = !this.menu_aberto;
-    },
-    btnParaEnviarPesquisa(e: MouseEvent): void {
+  setup() {
+    const route = useRoute();
+    const contaAberta = ref(false);
+
+    watchEffect(() => {
+      contaAberta.value = route.path === '/conta';
+    });
+
+    const menu_aberto = ref(false);
+    const sidebar_aberta = ref(false);
+    const input_name = ref('');
+
+    function animacaoMenuMobile() {
+      menu_aberto.value = !menu_aberto.value;
+      sidebar_aberta.value = !menu_aberto.value;
+    }
+
+    function btnParaEnviarPesquisa(e: MouseEvent) {
       e.preventDefault();
-      console.log(this.input_name);
-      this.input_name = "";
-    },
-    clickForaDoSidebar(e: MouseEvent): void {
-      if (this.menu_aberto) {
+      console.log(input_name.value);
+      input_name.value = "";
+    }
+
+    function clickNoHamburguer(e: MouseEvent) {
+      if (menu_aberto.value) {
         if (!(e.target as HTMLElement).closest("#nav-para-mobile")) {
-          this.menu_aberto = false;
+          menu_aberto.value = false;
         }
       }
-    },
-  },
-  mounted() {
-    document.addEventListener("click", this.clickForaDoSidebar);
-  },
-  beforeUnmount() {
-    document.removeEventListener("click", this.clickForaDoSidebar);
+    }
+
+    return {
+      contaAberta,
+      menu_aberto,
+      sidebar_aberta,
+      input_name,
+      animacaoMenuMobile,
+      btnParaEnviarPesquisa,
+      clickNoHamburguer,
+    };
   },
 };
 </script>
 
 <template>
-  <header>
+  <header :class="{ 'retirar-clip-path': contaAberta }">
     <div class="logoVueNexusContainer">
       <i class="fa-solid fa-spa"></i>
       <p>VueNexus</p>
@@ -67,17 +74,17 @@ export default {
       </ul>
       <div class="contaDoUsuarioDesktop"></div>
     </nav>
-    <nav id="nav-para-mobile" :class="{ show: menu_aberto }">
+    <nav id="nav-para-mobile">
       <div class="hamburguer" :class="{ show: menu_aberto }" @click="animacaoMenuMobile">
         <div class="linha-1"></div>
         <div class="linha-2"></div>
         <div class="linha-3"></div>
       </div>
-      <aside id="sidemenu-para-mobile" :class="{ show: menu_aberto }" @click="animacaoMenuMobile">
+      <aside id="sidemenu-para-mobile" :class="{ show: menu_aberto }">
         <section id="conta-do-usuario">
-          <i class="fa-solid fa-user-ninja"></i>
-          <span>Sign in</span>
-          <span>Sign up</span>
+          <i class="fa-solid fa-user-ninja" id="iconConta"></i>
+          <RouterLink to="/conta"><span>Start my journey (or return to it)</span></RouterLink>
+          <RouterView />
         </section>
         <ul>
           <li><a href="#">Home</a></li>
@@ -97,6 +104,7 @@ header {
   height: 100%;
   width: 100vw;
   padding: 20px 65px;
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
   position: relative;
 }
 
@@ -120,6 +128,10 @@ header::after {
   bottom: 0;
   background-image: url(/public/static/img/banner/banner.png);
   z-index: -2;
+}
+
+.retirar-clip-path {
+  clip-path: none;
 }
 
 header .logoVueNexusContainer p {
@@ -242,14 +254,15 @@ header nav {
 #nav-para-mobile #sidemenu-para-mobile {
   display: block;
   position: absolute;
-  top: 0;
-  left: -100px;
+  top: -280px;
+  left: 0;
   opacity: 0;
-  background-color: #000000;
+  background-color: var(--cor-rich-black);
   padding: 90px 35px 50px 35px;
-  width: 50%;
+  width: 100%;
   border-bottom-right-radius: 5px;
-  transition: all 0.8s;
+  transition: all 0.9s;
+  z-index: 1;
 }
 
 #nav-para-mobile #conta-do-usuario {
@@ -294,6 +307,7 @@ header nav {
 
 #nav-para-mobile #sidemenu-para-mobile.show {
   display: block;
+  top: 0;
   left: 0;
   opacity: 1;
   width: 100%;
@@ -304,6 +318,7 @@ header nav {
     display: flex;
     flex-direction: row-reverse;
     clip-path: none;
+    padding: 20px 35px;
   }
 
   header .logoVueNexusContainer p {

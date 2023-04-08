@@ -1,19 +1,48 @@
 <template>
-  <form>
+  <form @submit.prevent="enviarForm">
     <h1><span>Challenge your limits</span> - Create your account now</h1>
-    <input id="nomeDoUsuario" name="nomeDoUsuario" type="text" placeholder="Enter your username" required>
+    <input id="nomeDoUsuario" name="nomeDoUsuario" type="text" placeholder="Create a creative username here"
+      :maxlength="16" required>
     <input id="emailDoUsuario" name="emailDoUsuario" placeholder="Enter your email here" type="email" required>
-    <input id="senhaDoUsuario" name="senhaDoUsuario" type="password" placeholder="Create a secure password" required>
+    <input id="puuidDoUsuario" name="puuidDoUsuario" placeholder="Enter your player PUUID" type="text" :maxlength="32"
+      required>
+    <input id="senhaDoUsuario" name="senhaDoUsuario" type="password" placeholder="Create a secure password" :maxlength="8"
+      required>
     <button>Start my journey</button>
     <span id="login">Já é um membro?</span>
   </form>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, ref, onMounted } from 'vue';
+import api from "@/services/api";
 
 export default defineComponent({
   name: "formCadastro",
+  setup() {
+    const status = ref([]);
+
+    const fetchStatus = () => api.get("/val/status/v1/platform-data", {
+      params: {
+        api_key: "RGAPI-cd0b8f16-e514-48cc-85a7-dd1753e00f7a",
+      },
+    }).then((response) => (status.value =
+      response.data.results));
+    onMounted(fetchStatus);
+
+    const enviarForm = () => {
+      const inputDeSenha = document.getElementById("senhaDoUsuario") as HTMLInputElement | null;
+      if (inputDeSenha?.value.length !== 8) {
+        alert("That password doesn't have 8 characters. Please, fix it.");
+        return;
+      }
+    };
+
+    return {
+      status,
+      enviarForm
+    }
+  },
 })
 
 </script>
@@ -29,10 +58,11 @@ form {
   padding: 50px 30px;
 }
 
-h1, span {
+h1,
+span {
   margin-bottom: 40px;
   font-size: 24px;
-  color: black;
+  color: #000000;
 }
 
 #login {
@@ -74,6 +104,4 @@ button {
 button:hover {
   background-color: var(--cor-folly);
   width: 100%;
-}
-
-</style>
+}</style>
