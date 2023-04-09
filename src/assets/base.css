@@ -1,6 +1,10 @@
+@font-face {
+  font-family: "Valorant";
+  src: url(../../public/static/fonts/Valorant\ Font.ttf);
+}
+
 :root {
   --cor-folly: #F24464;
-  --cor-bright-pink: #FD5864;
   --cor-tyrian-purple: #591931;
   --cor-jungle-green: #1FA680;
   --cor-aquamarine: #2EF2BB;

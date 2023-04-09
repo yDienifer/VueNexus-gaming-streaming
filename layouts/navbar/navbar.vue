@@ -1,7 +1,7 @@
 <script lang="ts">
 import { ref, watchEffect } from 'vue';
 import { useRoute } from 'vue-router'
-;import { RouterLink, RouterView } from 'vue-router'
+  ; import { RouterLink, RouterView } from 'vue-router'
 import "@fortawesome/fontawesome-free/css/all.css";
 import InputDePesquisa from "./Input_de_pesquisa/input_de_pesquisa.vue";
 
@@ -60,7 +60,7 @@ export default {
       <i class="fa-solid fa-spa"></i>
       <p>VueNexus</p>
     </div>
-    <InputDePesquisa />
+    <InputDePesquisa id="pesquisa" />
     <nav id="nav-para-desktop">
       <ul>
         <li><a href="#">Home</a></li>
@@ -75,7 +75,8 @@ export default {
       <div class="contaDoUsuarioDesktop"></div>
     </nav>
     <nav id="nav-para-mobile">
-      <div class="hamburguer" :class="{ show: menu_aberto }" @click="animacaoMenuMobile">
+      <div class="hamburguer" :class="{ show: menu_aberto, 'retirar-hamburguer': contaAberta }"
+        @click="animacaoMenuMobile">
         <div class="linha-1"></div>
         <div class="linha-2"></div>
         <div class="linha-3"></div>
@@ -135,9 +136,8 @@ header::after {
 }
 
 header .logoVueNexusContainer p {
-  font-size: clamp(14px, 3vw, 24px);
-  font-family: "Bebas Neue", cursive;
-  text-transform: uppercase;
+  font-size: clamp(14px, 3vw, 22px);
+  font-family: "Valorant", cursive;
   margin-left: 5px;
 }
 
@@ -238,6 +238,10 @@ header nav {
   z-index: 2;
 }
 
+.retirar-hamburguer {
+  display: none;
+}
+
 #nav-para-mobile .hamburguer .linha-1,
 #nav-para-mobile .hamburguer .linha-2,
 #nav-para-mobile .hamburguer .linha-3 {
@@ -323,6 +327,13 @@ header nav {
 
   header .logoVueNexusContainer p {
     display: none;
+  }
+
+  header .logoVueNexusContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   #nav-para-desktop {

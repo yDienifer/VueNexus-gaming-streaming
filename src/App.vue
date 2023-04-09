@@ -4,7 +4,6 @@ import { defineComponent } from 'vue';
 import BarraDeNavegação from "../layouts/navbar/navbar.vue";
 import BannerDoSite from "./components/banner_do_site/banner_do_site.vue";
 import MenuLateral from "../layouts/menu_lateral/menu_lateral.vue";
-import videoStreamEstrutura from "./components/stream_estrutura/stream_estrutura.vue";
 
 import SecaoDeStreams from './components/secao_de_streams/secaos_de_stream.vue';
 
@@ -13,7 +12,6 @@ export default defineComponent({
     BarraDeNavegação,
     BannerDoSite,
     MenuLateral,
-    videoStreamEstrutura,
     SecaoDeStreams,
   }
 });

@@ -34,11 +34,16 @@ export default defineComponent({
     margin-top: 20px;
     width: 77%;
     position: relative;
-    z-index: -2;
+    z-index: 0;
+}
+
+#btn {
+    width: 50%;
+    margin-top: 15px;
 }
 
 video {
-    filter: grayscale(0.3);
+    filter: grayscale(0.2);
     opacity: 0.5;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -61,7 +66,7 @@ video {
 .conteudoDoBanner h1 {
     font-family: "League Gothic", sans-serif;
     font-size: clamp(2rem, 5vw, 5rem);
-    width: 100%;
+    width: 90%;
     text-transform: uppercase;
     color: white;
 }
@@ -93,7 +98,8 @@ video {
     }
 
     #bannerBackground {
-        background-image: url(/public/static/img/banner/banner.png);background-repeat: no-repeat;
+        background-image: url(/public/static/img/banner/banner.png);
+        background-repeat: no-repeat;
         opacity: 0.6;
         filter: grayscale(0.5);
         width: 100vw;
@@ -107,6 +113,7 @@ video {
         background-repeat: no-repeat;
         border-radius: 0;
     }
+
     video {
         display: none;
     }
