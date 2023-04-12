@@ -1,14 +1,26 @@
 <script lang="ts">
-import { ref, watchEffect } from 'vue';
-import { useRoute } from 'vue-router'
-  ; import { RouterLink, RouterView } from 'vue-router'
+import { ref, watchEffect, computed } from 'vue';
+import { useRoute } from 'vue-router';
+import { RouterLink, RouterView } from 'vue-router'
+
 import "@fortawesome/fontawesome-free/css/all.css";
+
 import InputDePesquisa from "./Input_de_pesquisa/input_de_pesquisa.vue";
+import ListaComIcon from "../../src/components/lista-com-icon/lista_com_icon.vue";
+
+import json from '../../public/static/json/atalhos.json';
+
+type Atalhos = {
+  id: number;
+  nomeDoAtalho: string;
+  iconDoAtalho: string;
+};
 
 export default {
   name: "BarraDeNavegacao",
   components: {
     InputDePesquisa,
+    ListaComIcon
   },
   setup() {
     const route = useRoute();
@@ -41,14 +53,17 @@ export default {
       }
     }
 
+    const atalhos = ref<Record<string, Atalhos[]>>(json.MenuLateral);
+    const atalhosDiscover = computed(() => atalhos.value.SecaoDiscover);
+
     return {
       contaAberta,
       menu_aberto,
       sidebar_aberta,
-      input_name,
       animacaoMenuMobile,
       btnParaEnviarPesquisa,
       clickNoHamburguer,
+      atalhosDiscover,
     };
   },
 };
@@ -87,10 +102,9 @@ export default {
           <RouterLink to="/conta"><span>Start my journey (or return to it)</span></RouterLink>
           <RouterView />
         </section>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Streams</a></li>
-          <li><a href="#">Streamers</a></li>
+        <ul class="atalhos-da-secao">
+          <span>Discover</span>
+          <ListaComIcon :atalhos="atalhosDiscover" />
         </ul>
       </aside>
     </nav>
@@ -273,6 +287,7 @@ header nav {
   display: flex;
   width: 100%;
   align-items: center;
+  margin-bottom: 40px;
 }
 
 #nav-para-mobile #conta-do-usuario span {
@@ -284,16 +299,29 @@ header nav {
   font-size: clamp(2.5em, 3vw, 3.5em);
 }
 
-#nav-para-mobile ul li:nth-of-type(1) {
-  margin-top: 30px;
+#nav-para-mobile .atalhos-da-secao span {
+  color: gray;
+  cursor: cell;
+  width: 0;
+  position: relative;
 }
 
-#nav-para-mobile ul li {
-  margin-bottom: 20px;
+#nav-para-mobile .atalhos-da-secao span::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--cor-folly);
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-out;
 }
 
-#nav-para-mobile ul li:nth-of-type(3) {
-  margin-bottom: 0;
+#nav-para-mobile .atalhos-da-secao span:hover::after {
+  transform-origin: left;
+  transform: scaleX(100%);
 }
 
 /* TypeScript CSS */

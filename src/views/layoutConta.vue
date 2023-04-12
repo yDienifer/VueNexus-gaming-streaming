@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="formularioDeCadastroContainer">
-            <RouterLink to="/"><i class="fa-sharp fa-solid fa-xmark"></i></RouterLink>
+            <RouterLink to="/home"><i class="fa-sharp fa-solid fa-xmark"></i></RouterLink>
             <RouterView />
             <form @submit.prevent="enviarForm">
                 <h1>Create your account now and <span>win exclusive Valorant rewards</span> through our
@@ -28,6 +28,10 @@ import api from "@/services/api";
 
 import dotenv from 'dotenv';
 dotenv.config();
+
+import * as path from 'path';
+
+import process from 'process';
 
 import botaoDeRedimensionamento from "../components/botao/botao.vue";
 

@@ -18,7 +18,10 @@
     "@fortawesome/free-regular-svg-icons": "^6.3.0",
     "@fortawesome/free-solid-svg-icons": "^6.3.0",
     "@ionic/vue": "^6.7.0",
+    "browser": "^0.2.6",
     "ionicons": "^7.1.0",
+    "process": "^0.11.10",
+    "process-es6": "^0.11.6",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6"
   },

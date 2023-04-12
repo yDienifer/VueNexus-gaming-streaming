@@ -1,6 +1,6 @@
 <template>
     <div class="caixaDePesquisa">
-        <input type="search" v-model="input_name" placeholder="Type here to search..." />
+        <input type="search" v-model="input_search" placeholder="Type here to search..." />
         <!-- v-model = cria um vínculo bidirecional de dados, ou seja, qualquer coisa 
                                                                                     atribuída ao v-model do elemento será aplicada automaticamente no mesmo. -->
         <input type="submit" v-on:click="btnParaEnviarPesquisa" value="🔎" />
@@ -9,25 +9,23 @@
 </template>
 
 <script lang="ts">
-export default {
+import { defineComponent } from 'vue';
+
+export default defineComponent({
     name: "InputDePesquisa",
     data() {
         return {
-            // Define dados dos componentes
-            input_name: "",
+            input_search: "",
+            btn_pesquisar: ""
         };
     },
     methods: {
-        // Responsável por funções da aplicação
-        btnParaEnviarPesquisa(e) {
+        btnParaEnviarPesquisa(e: Event) {
             e.preventDefault();
-            console.log(this.input_name); /* This = Serve para referir 
-            às propriedades e métodos do objeto em que ele é chamado. */
-
-            this.name = this.input_name;
-        },
-    },
-};
+            this.btn_pesquisar = this.input_search;
+        }
+    }
+}); 
 </script>
 
 <style scoped>

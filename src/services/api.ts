@@ -1,4 +1,5 @@
-import axios, { AxiosInstance } from "axios";
+import type { AxiosInstance } from 'axios';
+import axios from 'axios';
 
 const api: AxiosInstance = axios.create({
     baseURL: "https://api.valorant.com/v1/",

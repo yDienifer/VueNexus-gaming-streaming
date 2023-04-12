@@ -8,7 +8,6 @@ import botaoDeRedimensionamento from "../botao/botao.vue";
         </video>
         <div id="bannerBackground"></div>
         <div class="conteudoDoBanner">
-
             <h1>Experience the adrenaline of Valorant's best plays</h1>
             <!-- Adiciona um scroll reveal aq -->
             <botaoDeRedimensionamento id="btn" titulo-introdutorio-do-btn="Get in on the Action" />
@@ -32,7 +31,7 @@ export default defineComponent({
     display: flex;
     flex-direction: column;
     margin-top: 20px;
-    width: 77%;
+    width: 78%;
     position: relative;
     z-index: 0;
 }
@@ -88,6 +87,10 @@ video {
         width: 100vw;
         height: 100vw;
         top: 0;
+    }
+
+    #btn {
+        width: 100%;
     }
 
     .conteudoDoBanner {

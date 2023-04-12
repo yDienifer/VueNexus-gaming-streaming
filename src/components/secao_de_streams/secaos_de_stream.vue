@@ -1,12 +1,12 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import json from "../../assets/streams.json";
+import json from "../../../public/static/json/streams.json";
 
-import carrosselDeStreams from '../carrossel_de_streams/carrossel_de_streams.vue'
+import carrosselDeStreams from '../carrossel_de_streams/carrossel_de_streams.vue';
 
 type Stream = {
     id: number;
-    fotoDaCapaDaLive: string;
+    fotoDaCapaDaLive?: string;
     altDaImgDeCapaDaLive: string;
     tituloDaLive: string;
     fotoDePerfilDoStreamer: string;
@@ -35,7 +35,7 @@ export default defineComponent({
         const CasualMatches = ref<Stream[]>(json.CasualMatches);
         const Tutorials = ref<Stream[]>(json.Tutorials);
         const PlayingWithViewers = ref<Stream[]>(json.PlayingWithViewers);
-        const Competitions = ref<Stream[]>(json.Competitions);
+        const Competitions = ref <Stream[]> (json.Competitions);
         const Challenges = ref<Stream[]>(json.Challenges);
         const News = ref<Stream[]>(json.News);
 

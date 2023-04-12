@@ -2,15 +2,12 @@
   "compilerOptions": { // Opções de compilação
     "target": "ES5", /* Responsável por específicar 
     qual versão do ECMAScript compilará o código. */
-
     "module": "CommonJS", /* Essa opção é usada para
     determinar qual o sistema de módulos que será usado
     pelo TS. */
-
     "strict": true, /* Habilita uma verificação de tipos
     de estrita e a proibição de variáveis que não estão sendo
     utéis. */
-
     "jsx": "preserve", /* Indica como o TypeScript deve lidar com 
     o JSX presente no código.
 
@@ -26,36 +23,30 @@
     React. 
      
     */
-
     "moduleResolution": "node", /* Dita o modo como o TS deve resolver as
     importações de módulos. */
-
     "resolveJsonModule": true, /* Faz com que o TS importe os arquivos JSON
     como módulos. */
-
     "esModuleInterop": true /* permite que o TS faça a importação de módulos do 
     ECMAScript em projetos que usam o sistema de módulos do CommonJS. Isso facilita,
     e muito, a importação de módulos. */
   },
-
   "include": [ // Arquivos que serão incluídos no programa.
-    "src/**/*.ts", 
+    "src/**/*.ts",
     /* 
     * = Serve para especificar qualquer nome de diretório ou
     arquivo. 
     */
-
     "src/**/*.tsx",
     "tests/**/*.ts", /* O diretório de tests é utilizado para abranger todos
     os testes automatizados do projeto. É importante. */
-
-    "tests/**/*.tsx"
+    "tests/**/*.tsx",
+    "src/assets/*.json",
+    "public/static/json/*.json",
   ],
-
   "exclude": [ // Arquivos que NÃO serão incluídos no programa.
     "node_modules"
   ],
-
   "references": [ // Referência das configurações de outros arquivos ts.
     {
       "path": "./tsconfig.node.json"
