@@ -60,6 +60,7 @@ export default defineComponent({
     height: 100%;
     float: left;
     padding: 0 25px;
+    z-index: 2;
 }
 
 .menu-lateral-container::before {
@@ -84,7 +85,6 @@ export default defineComponent({
     bottom: 0;
     background-image: url(/public/static/img/banner/banner.png);
     background-position-x: 1300px;
-    /* background-position-x: 258px; */
     z-index: -2;
 }
 

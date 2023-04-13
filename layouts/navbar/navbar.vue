@@ -1,7 +1,7 @@
 <script lang="ts">
 import { ref, watchEffect, computed } from 'vue';
-import { useRoute } from 'vue-router';
-import { RouterLink, RouterView } from 'vue-router'
+import { useRoute, RouterLink } from 'vue-router';
+import { defineComponent } from 'vue';
 
 import "@fortawesome/fontawesome-free/css/all.css";
 
@@ -16,11 +16,11 @@ type Atalhos = {
   iconDoAtalho: string;
 };
 
-export default {
+export default defineComponent({
   name: "BarraDeNavegacao",
   components: {
     InputDePesquisa,
-    ListaComIcon
+    ListaComIcon,
   },
   setup() {
     const route = useRoute();
@@ -60,18 +60,18 @@ export default {
       contaAberta,
       menu_aberto,
       sidebar_aberta,
+      atalhosDiscover,
       animacaoMenuMobile,
       btnParaEnviarPesquisa,
-      clickNoHamburguer,
-      atalhosDiscover,
+      clickNoHamburguer
     };
   },
-};
+});
 </script>
 
 <template>
   <header :class="{ 'retirar-clip-path': contaAberta }">
-    <div class="logoVueNexusContainer">
+    <div id="logoVueNexusContainer">
       <i class="fa-solid fa-spa"></i>
       <p>VueNexus</p>
     </div>
@@ -85,7 +85,6 @@ export default {
           <i class="fa-regular fa-bell" id="iconNotificacoes"></i>
           <RouterLink to="/conta"><i class="fa-solid fa-user-ninja" id="iconConta"></i></RouterLink>
         </div>
-        <RouterView />
       </ul>
       <div class="contaDoUsuarioDesktop"></div>
     </nav>
@@ -100,7 +99,6 @@ export default {
         <section id="conta-do-usuario">
           <i class="fa-solid fa-user-ninja" id="iconConta"></i>
           <RouterLink to="/conta"><span>Start my journey (or return to it)</span></RouterLink>
-          <RouterView />
         </section>
         <ul class="atalhos-da-secao">
           <span>Discover</span>
@@ -149,23 +147,27 @@ header::after {
   clip-path: none;
 }
 
-header .logoVueNexusContainer p {
+header #logoVueNexusContainer {
+  cursor: pointer;
+}
+
+header #logoVueNexusContainer p {
   font-size: clamp(14px, 3vw, 22px);
   font-family: "Valorant", cursive;
   margin-left: 5px;
 }
 
-header .logoVueNexusContainer p::first-letter {
+header #logoVueNexusContainer p::first-letter {
   color: var(--cor-folly);
 }
 
-header .logoVueNexusContainer i p {
+header #logoVueNexusContainer i p {
   display: inline-block;
   width: 100%;
 }
 
-header .logoVueNexusContainer i:nth-of-type(1),
-header .logoVueNexusContainer p {
+header #logoVueNexusContainer i:nth-of-type(1),
+header #logoVueNexusContainer p {
   cursor: pointer;
   display: inline-block;
 }

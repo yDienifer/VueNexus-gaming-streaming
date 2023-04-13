@@ -4,6 +4,7 @@
         <MenuLateral />
         <main>
             <BannerDoSite />
+            <RouterView />
             <SecaoDeStreams />
         </main>
     </div>
@@ -37,6 +38,7 @@ main {
     width: 100%;
     height: 90vh;
     overflow-x: hidden;
+    position: absolute;
 }
 
 main::-webkit-scrollbar {

@@ -1,8 +1,8 @@
 <template>
     <div class="container">
-        <div class="formularioDeCadastroContainer">
-            <RouterLink to="/home"><i class="fa-sharp fa-solid fa-xmark"></i></RouterLink>
-            <RouterView />
+        <div class="formularioDeCadastroContainer" v-if="formulárioDeCadastroVisível">
+            <RouterLink to="/home" replace><i class="fa-sharp fa-solid fa-xmark" ref="iconeFecharFormulário"
+                    @click="formulárioDeCadastroVisível = false"></i></RouterLink><RouterView replace />
             <form @submit.prevent="enviarForm">
                 <h1>Create your account now and <span>win exclusive Valorant rewards</span> through our
                     <span>giveaways and
@@ -11,7 +11,7 @@
                 <input id="nomeDoUsuario" name="nomeDoUsuario" type="text" placeholder="Create a unique username"
                     :maxlength="16" required>
                 <input id="emailDoUsuario" name="emailDoUsuario" placeholder="Enter your email here" type="email" required>
-                <input ref="PUUID" id="puuidDoUsuario" name="puuidDoUsuario" placeholder="What's your Valorant PUUID?"
+                <input ref="Puiid" id="puuidDoUsuario" name="puuidDoUsuario" placeholder="What's your Valorant PUUID?"
                     type="text" :maxlength="32">
                 <input id="senhaDoUsuario" name="senhaDoUsuario" type="password" placeholder="Create a secure password"
                     :maxlength="8" required>
@@ -19,23 +19,17 @@
                 <span id="login">Are you already a member?</span>
             </form>
         </div>
+        
     </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref, onMounted } from 'vue';
+import { nextTick } from 'vue';
+
 import api from "@/services/api";
 
-import dotenv from 'dotenv';
-dotenv.config();
-
-import * as path from 'path';
-
-import process from 'process';
-
 import botaoDeRedimensionamento from "../components/botao/botao.vue";
-
-import { RouterLink, RouterView } from 'vue-router';
 
 export default defineComponent({
     name: "LayoutFormulario",
@@ -43,14 +37,12 @@ export default defineComponent({
         botaoDeRedimensionamento
     },
     setup() {
-        const PUUID = ref([]);
-         const apiKey = process.env.VUE_APP_RIOT_API_KEY;
+        const formulárioDeCadastroVisível = ref(true);
 
-        const FETCH_PUUID = () => api.get("/riot/account/v1/accounts/by-puuid/{puuid}", {
-            params: {
-                api_key: apiKey
-            },
-        }).then((response) => (PUUID.value =
+        const Puuid = ref("");
+
+        const FETCH_PUUID = () => api.get("https://valorant-api.com/v1/playertitles/" + Puuid.value, {
+        }).then((response) => (Puuid.value =
             response.data.results));
         onMounted(FETCH_PUUID);
 
@@ -62,11 +54,32 @@ export default defineComponent({
             }
         };
 
+        const iconeFecharFormulário = ref<HTMLElement | null>(null);
+        const fecharFormulário = () => {
+            formulárioDeCadastroVisível.value = false;
+        };
+
+        onMounted(() => {
+            iconeFecharFormulário.value?.addEventListener("click", fecharFormulário);
+            nextTick(() => {
+                iconeFecharFormulário.value?.addEventListener("click", () => {
+                    formulárioDeCadastroVisível.value = false;
+                });
+            });
+        });
+
         return {
-            PUUID,
-            enviarForm
+            Puuid,
+            enviarForm,
+            formulárioDeCadastroVisível,
+            iconeFecharFormulário
         }
     },
+    methods: {
+        atualizarPUUID(e: InputEvent) {
+            this.Puuid = (e.target as HTMLInputElement).value;
+        },
+    }
 });
 </script>
   
@@ -92,6 +105,8 @@ export default defineComponent({
     position: absolute;
     margin-left: 15px;
     font-size: 24px;
+    z-index: 2;
+    cursor: pointer;
 }
 
 .formularioDeCadastroContainer form {
