@@ -4,8 +4,8 @@
         <MenuLateral />
         <main>
             <BannerDoSite />
-            <RouterView />
             <SecaoDeStreams />
+            <RouterView />
         </main>
     </div>
 </template>
@@ -17,7 +17,7 @@ import BarraDeNavegação from "../../layouts/navbar/navbar.vue";
 import BannerDoSite from "../components/banner_do_site/banner_do_site.vue";
 import MenuLateral from "../../layouts/menu_lateral/menu_lateral.vue";
 
-import SecaoDeStreams from '../components/secao_de_streams/secaos_de_stream.vue';
+import SecaoDeStreams from '../components/secoes_de_streams/secoes_de_stream.vue';
 
 export default defineComponent({
     name: "Home",

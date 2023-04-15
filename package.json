@@ -23,6 +23,7 @@
     "path-browserify": "^1.0.1",
     "process": "^0.11.10",
     "process-es6": "^0.11.6",
+    "scrollreveal": "^4.0.9",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6"
   },
@@ -32,6 +33,7 @@
     "@types/jsdom": "^21.1.0",
     "@types/node": "^18.15.11",
     "@types/path-browserify": "^1.0.0",
+    "@types/scrollreveal": "^0.0.8",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vitejs/plugin-vue-jsx": "^3.0.0",
     "@vue/eslint-config-typescript": "^11.0.2",

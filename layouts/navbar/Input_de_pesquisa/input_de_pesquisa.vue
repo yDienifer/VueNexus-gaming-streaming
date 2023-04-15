@@ -2,8 +2,9 @@
     <div class="caixaDePesquisa">
         <input type="search" v-model="input_search" placeholder="Type here to search..." />
         <!-- v-model = cria um vínculo bidirecional de dados, ou seja, qualquer coisa 
-                                                                                    atribuída ao v-model do elemento será aplicada automaticamente no mesmo. -->
-        <input type="submit" v-on:click="btnParaEnviarPesquisa" value="🔎" />
+        atribuída ao v-model do elemento será aplicada automaticamente no mesmo. -->
+
+        <span v-on:click="btnParaEnviarPesquisa"><i class="fa-solid fa-magnifying-glass"></i></span>
         <!-- v-on = adiciona manipuladores de eventos. -->
     </div>
 </template>
@@ -29,29 +30,34 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.caixaDePesquisa input {
-    padding: 10px 8px;
-    border: none;
+.caixaDePesquisa {
     border-bottom: 1px solid white;
-    color: var(--cor-preta);
+    padding: 10px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    background-color: transparent;
+    color: var(--cor-rich-black);
     background-color: transparent;
 }
 
-.caixaDePesquisa input:nth-of-type(1) {
-    border-top-left-radius: 3px;
-    width: 18vw;
-    border-bottom-left-radius: 3px;
-}
-
-.caixaDePesquisa input:nth-of-type(2) {
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
+input {
+    margin-right: clamp(10px, 2.5vw, 70px);
+    border: none;
     background-color: transparent;
 }
 
 @media (max-width: 768px) {
-    .caixaDePesquisa input:nth-of-type(1) {
-        width: 28vw;
+    .caixaDePesquisa {
+        border-bottom: none;
+        padding: 0;
+    }
+
+    .caixaDePesquisa input {
+        display: none;
+    }
+
+    .caixaDePesquisa:hover  {
+        border-bottom: 1px solid white;
     }
 
 }

@@ -104,7 +104,7 @@ video {
         background-image: url(/public/static/img/banner/banner.png);
         background-repeat: no-repeat;
         opacity: 0.6;
-        filter: grayscale(0.5);
+        filter: grayscale(0.2);
         width: 100vw;
         height: 950px;
         position: absolute;
@@ -125,6 +125,9 @@ video {
 @media (max-width: 425px) {
     .bannerContainer {
         margin-top: 0;
+    }
+    .conteudoDoBanner {
+        padding: 30px 10px 10px 20px;
     }
 }
 </style>

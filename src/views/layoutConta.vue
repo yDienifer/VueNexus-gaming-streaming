@@ -1,9 +1,10 @@
 <template>
     <div class="container">
         <div class="formularioDeCadastroContainer" v-if="formulárioDeCadastroVisível">
-            <RouterLink to="/home" replace><i class="fa-sharp fa-solid fa-xmark" ref="iconeFecharFormulário"
-                    @click="formulárioDeCadastroVisível = false"></i></RouterLink><RouterView replace />
-            <form @submit.prevent="enviarForm">
+            <RouterLink to="/home" @click.prevent="btnVoltarParaHome">
+                <i class="fa-sharp fa-solid fa-xmark" ref="iconeFecharFormulário"></i>
+            </RouterLink>
+            <form @submit="enviarForm">
                 <h1>Create your account now and <span>win exclusive Valorant rewards</span> through our
                     <span>giveaways and
                         competitions!</span>
@@ -17,14 +18,17 @@
                     :maxlength="8" required>
                 <botaoDeRedimensionamento id="btn" titulo-introdutorio-do-btn="Start my journey" />
                 <span id="login">Are you already a member?</span>
+                <ul>
+                    <li id="resultadoDoPuuid"><a href="#">{{ Puuid }}</a></li>
+                </ul>
             </form>
         </div>
-        
     </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref, onMounted } from 'vue';
+import { useRouter } from 'vue-router';
 import { nextTick } from 'vue';
 
 import api from "@/services/api";
@@ -37,23 +41,40 @@ export default defineComponent({
         botaoDeRedimensionamento
     },
     setup() {
+        const router = useRouter();
+
+        const btnVoltarParaHome = () => router.push('/home');
+
         const formulárioDeCadastroVisível = ref(true);
 
+        // Btn de enviar formulário + API get ------------------------------------- //
         const Puuid = ref("");
-
-        const FETCH_PUUID = () => api.get("https://valorant-api.com/v1/playertitles/" + Puuid.value, {
-        }).then((response) => (Puuid.value =
-            response.data.results));
-        onMounted(FETCH_PUUID);
-
-        const enviarForm = () => {
-            const inputDeSenha = document.getElementById("senhaDoUsuario") as HTMLInputElement | null;
+        const enviarForm = async (e: Event) => {
+            const inputDeSenha = document.getElementById("senhaDoUsuario") as HTMLInputElement;
             if (inputDeSenha?.value.length !== 8) {
                 alert("That password doesn't have 8 characters. Please, fix it.");
-                return;
+                e.preventDefault();
+            } else {
+                alert("Congratulations! Your account has been successfully created. Have a great adventure!");
+                // window.location.reload();
+                router.push("/home");
+
+            } try {
+                const response = await api.get(`https://valorant-api.com/v1/playertitles/${Puuid.value}`);
+                // await = faz a requisição de dados
+                // response = resposta da requisição feita ao serve
+
+                Puuid.value = response.data.results
+
+                const resultadoDoPuuid = document.getElementById("resultadoDoPuuid") as HTMLInputElement;
+                resultadoDoPuuid.innerHTML = response.data.results
+
+            } catch (error) {
+                console.error("Ocorreu um erro, tente novamente mais tarde", error);
             }
         };
 
+        // Btn de fechar formulário ------------------------------------- //
         const iconeFecharFormulário = ref<HTMLElement | null>(null);
         const fecharFormulário = () => {
             formulárioDeCadastroVisível.value = false;
@@ -72,7 +93,8 @@ export default defineComponent({
             Puuid,
             enviarForm,
             formulárioDeCadastroVisível,
-            iconeFecharFormulário
+            iconeFecharFormulário,
+            btnVoltarParaHome
         }
     },
     methods: {
@@ -151,6 +173,11 @@ export default defineComponent({
 
 .formularioDeCadastroContainer input:focus {
     border: 1px solid var(--cor-folly);
+}
+
+li {
+    color: #000000;
+    margin-top: 5px;
 }
 
 @media (max-width: 768px) {

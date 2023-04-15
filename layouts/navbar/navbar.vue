@@ -98,7 +98,7 @@ export default defineComponent({
       <aside id="sidemenu-para-mobile" :class="{ show: menu_aberto }">
         <section id="conta-do-usuario">
           <i class="fa-solid fa-user-ninja" id="iconConta"></i>
-          <RouterLink to="/conta"><span>Start my journey (or return to it)</span></RouterLink>
+          <RouterLink to="/conta"><span>Unlock exclusive content!</span></RouterLink>
         </section>
         <ul class="atalhos-da-secao">
           <span>Discover</span>
@@ -152,7 +152,7 @@ header #logoVueNexusContainer {
 }
 
 header #logoVueNexusContainer p {
-  font-size: clamp(14px, 3vw, 22px);
+  font-size: clamp(14px, 3vw, 18px);
   font-family: "Valorant", cursive;
   margin-left: 5px;
 }
@@ -174,7 +174,7 @@ header #logoVueNexusContainer p {
 
 header i:nth-of-type(1),
 header i:nth-of-type(2) {
-  font-size: clamp(26px, 2vw, 26px);
+  font-size: clamp(22px, 2vw, 26px);
   color: var(--cor-folly);
 }
 
@@ -210,7 +210,6 @@ header nav {
 
 #nav-para-desktop .contaDoUsuario i {
   margin-left: 20px;
-  border-left: 1px solid rgba(255, 255, 255, 0.582);
   padding-left: 25px;
   cursor: pointer;
 }
@@ -355,11 +354,7 @@ header nav {
     padding: 20px 35px;
   }
 
-  header .logoVueNexusContainer p {
-    display: none;
-  }
-
-  header .logoVueNexusContainer {
+  header #logoVueNexusContainer {
     position: absolute;
     top: 50%;
     left: 50%;
