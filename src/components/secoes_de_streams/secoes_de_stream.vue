@@ -1,4 +1,4 @@
-<script lang="ts">
+<script lang="ts">;
 import { defineComponent, ref, onMounted } from 'vue';
 import json from "../../../public/static/json/streams.json";
 
@@ -23,10 +23,6 @@ export default defineComponent({
     setup() { // Configuração de componente
 
         const tituloSecaoStreams = ref();
-
-        onMounted(() => {
-            ScrollReveal().reveal(tituloSecaoStreams.value, { delay: 200, origin: 'right', distance: '50px' });
-        });
 
         const RankedMatches = ref<Stream[]>(json.RankedMatches);
 
@@ -98,8 +94,7 @@ export default defineComponent({
 
 section {
     margin-top: 100px;
-    width: 77%;
-    height: 100vw;
+    width: 77vw;
     padding: 10px 1.5rem 0 0;
 }
 
@@ -112,6 +107,10 @@ section:nth-of-type(7) {
     margin-top: 70px;
 }
 
+section:nth-of-type(7) {
+    margin-bottom: 100px;
+}
+
 @media (max-width: 1024px) {
     section {
         width: 70vw;
@@ -122,7 +121,6 @@ section:nth-of-type(7) {
     section {
         width: 98vw;
         margin-top: 80px;
-        height: 100vw;
         padding: 10px 1.5rem 0 0;
     }
 }
@@ -130,8 +128,17 @@ section:nth-of-type(7) {
 @media (max-width: 425px) {
     section {
         width: 97vw;
-        height: 100vw;
+        margin-left: 10px;
         margin-top: 430px;
+    }
+    section:nth-of-type(1) {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 320px) {
+    section:nth-of-type(1) {
+        margin-top: 120px;
     }
 }
 </style>
