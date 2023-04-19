@@ -19,6 +19,8 @@
     "@fortawesome/free-solid-svg-icons": "^6.3.0",
     "@ionic/vue": "^6.7.0",
     "browser": "^0.2.6",
+    "gsap": "^3.11.5",
+    "intersection-observer": "^0.12.2",
     "ionicons": "^7.1.0",
     "path-browserify": "^1.0.1",
     "scroll-smooth": "^1.1.1",

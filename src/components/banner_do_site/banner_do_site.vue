@@ -17,12 +17,27 @@ import botaoDeRedimensionamento from "../botao/botao.vue";
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import gsap from "gsap";
 
 export default defineComponent({
     name: "BannerDoSite",
     components: {
         botaoDeRedimensionamento,
-    }
+    },
+    mounted() {
+        gsap.from(".bannerContainer", {
+            duration: 1.5,
+            y: 100,
+            opacity: 0,
+            ease: "slow(0.4, 0.7, false)"
+        });
+        gsap.from(".conteudoDoBanner", {
+            duration: 1.6,
+            y: 100,
+            opacity: 0,
+            ease: "back.out(1.7)"
+        });
+    },
 })
 </script>
 
@@ -126,6 +141,7 @@ video {
     .bannerContainer {
         margin-top: 0;
     }
+
     .conteudoDoBanner {
         padding: 30px 10px 10px 20px;
     }

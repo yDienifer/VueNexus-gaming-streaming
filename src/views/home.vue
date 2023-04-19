@@ -2,12 +2,11 @@
     <div>
         <BarraDeNavegacao />
         <MenuLateral />
-        <main>
-            <div id="myScrollbar">
-                <BannerDoSite />
-                <SecaoDeStreams />
-                <RouterView />
-            </div>
+        <main id="myScrollbar">
+            <BannerDoSite />
+            <SecaoDeStreams />
+            <RouterView />
+
         </main>
     </div>
 </template>
@@ -48,9 +47,8 @@ main {
     flex-direction: column;
     align-items: flex-end;
     width: 100%;
-    height: 100%;
-    overflow-x: auto;
+    height: 90vh;
+    overflow: auto;
     position: absolute;
 }
-
 </style>
