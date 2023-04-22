@@ -57,24 +57,24 @@ export default defineComponent({
     mounted() {
         // Criando uma instância do Intersection Observer para o Ranked Matches
         const seçãoRankedMatchesComGSAP = document.querySelectorAll('.secaoDeStreamRankedMatches');
+
+        const options = {
+            root: null,
+            once: true
+        };
+
         const ObservandoRankedMatches = new IntersectionObserver(entries => {
             entries.forEach(entry => {
-                /* each = percorre as entradas recebidas do IntersectionObserver, que nada
-                mais são do que informações do elemento observado */
-
-                // entry = acessa as entradas fornecidas pelo each
                 if (entry.isIntersecting) {
-                    /* Verificando se o elemento observado
-                    está atualmente visível na tela. Se sim: */
-
                     gsap.from(".secaoDeStreamRankedMatches", {
-                        duration: 1.6,
-                        y: 30,
-                        ease: "back.out(3)"
+                        duration: 1.3,
+                        y: 100,
+                        yPercent: 40,
                     });
+                    ObservandoRankedMatches.unobserve(entry.target);
                 }
             });
-        });
+        }, options); // Faz a animação ocorrer apenas uma vez
 
         seçãoRankedMatchesComGSAP.forEach(element => {
             ObservandoRankedMatches.observe(element);
@@ -86,31 +86,32 @@ export default defineComponent({
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     gsap.from(".secaoDeStreamCasualMatches", {
-                        duration: 1.6,
-                        y: 30,
-                        ease: "back.out(3)"
+                        duration: 1.3,
+                        y: 100,
+                        yPercent: 40,
                     });
+                    ObservandoCasualMatches.unobserve(entry.target);
                 }
             });
-        });
+        }, options);
 
         seçãoCasualMatchesComGSAP.forEach(element => {
             ObservandoCasualMatches.observe(element);
         });
-
         // ///////////////////// Tutoriais
         const seçãoTutoriaisComGSAP = document.querySelectorAll('.secaoDeStreamTutoriais');
         const ObservandoTutoriais = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     gsap.from(".secaoDeStreamTutoriais", {
-                        duration: 1.6,
-                        y: 30,
-                        ease: "back.out(3)"
+                        duration: 1.3,
+                        y: 100,
+                        yPercent: 40,
                     });
+                    ObservandoTutoriais.unobserve(entry.target);
                 }
             });
-        });
+        }, options); // Faz a animação ocorrer apenas uma vez
 
         seçãoTutoriaisComGSAP.forEach(element => {
             ObservandoTutoriais.observe(element);
@@ -122,13 +123,14 @@ export default defineComponent({
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     gsap.from(".secaoDeStreamPlayingWithViewers", {
-                        duration: 1.6,
-                        y: 30,
-                        ease: "back.out(3)"
+                        duration: 1.3,
+                        y: 100,
+                        yPercent: 40,
                     });
+                    ObservandoPlayingWithViewers.unobserve(entry.target);
                 }
             });
-        });
+        }, options); // Faz a animação ocorrer apenas uma vez
 
         seçãoPlayingWithViewersComGSAP.forEach(element => {
             ObservandoPlayingWithViewers.observe(element);
@@ -142,13 +144,14 @@ export default defineComponent({
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     gsap.from(".secaoDeStreamCompetitions", {
-                        duration: 1.6,
-                        y: 30,
-                        ease: "back.out(3)"
+                        duration: 1.3,
+                        y: 100,
+                        yPercent: 40,
                     });
+                    ObservandoCompetitions.unobserve(entry.target);
                 }
             });
-        });
+        }, options); // Faz a animação ocorrer apenas uma vez
 
         seçãoCompetitionsComGSAP.forEach(element => {
             ObservandoCompetitions.observe(element);
@@ -160,13 +163,14 @@ export default defineComponent({
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     gsap.from(".secaoDeStreamChallenges", {
-                        duration: 1.6,
-                        y: 30,
-                        ease: "back.out(3)"
+                        duration: 1.3,
+                        y: 100,
+                        yPercent: 40,
                     });
+                    ObservandoChallenges.unobserve(entry.target);
                 }
             });
-        });
+        }, options); // Faz a animação ocorrer apenas uma vez
 
         seçãoChallengesComGSAP.forEach(element => {
             ObservandoChallenges.observe(element);
@@ -178,13 +182,14 @@ export default defineComponent({
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     gsap.from(".secaoDeStreamNews", {
-                        duration: 1.6,
-                        y: 30,
-                        ease: "back.out(3)"
+                        duration: 1.3,
+                        y: 100,
+                        yPercent: 40,
                     });
+                    ObservandoNews.unobserve(entry.target);
                 }
             });
-        });
+        }, options); // Faz a animação ocorrer apenas uma vez
 
         seçãoNewsComGSAP.forEach(element => {
             ObservandoNews.observe(element);
@@ -232,9 +237,7 @@ export default defineComponent({
 #tituloSecaoCompetitions,
 #tituloSecaoChallenges,
 #tituloSecaoNews {
-    font-size: clamp(18px, 3vw, 32px);
-    display: flex;
-    justify-content: center;
+    font-size: clamp(18px, 3vw, 36px);
     margin-bottom: -35px;
     padding: 0;
     font-family: "Valorant";

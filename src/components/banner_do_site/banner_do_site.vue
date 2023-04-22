@@ -3,13 +3,13 @@ import botaoDeRedimensionamento from "../botao/botao.vue";
 </script>
 
 <template>
-    <div class="bannerContainer"><video autoplay muted loop>
-            <source src="../../../public/static/video/BowedAcademicJenny.mp4" type="video/mp4" />
+    <div class="bannerContainer">
+        <video autoplay muted loop>
+            <source src="../../../public/static/video/videoplayback.mp4" type="video/mp4" />
         </video>
         <div id="bannerBackground"></div>
         <div class="conteudoDoBanner">
             <h1>Experience the adrenaline of Valorant's best plays</h1>
-            <!-- Adiciona um scroll reveal aq -->
             <botaoDeRedimensionamento class="botaoDeRedimensionamento" titulo-introdutorio-do-btn="Get in on the Action" />
         </div>
     </div>
@@ -27,15 +27,15 @@ export default defineComponent({
     mounted() {
         gsap.from(".bannerContainer", {
             duration: 1.5,
-            y: 100,
+            x: 100,
             opacity: 0,
             ease: "slow(0.4, 0.7, false)"
         });
         gsap.from(".conteudoDoBanner", {
-            duration: 1.6,
-            y: 100,
+            duration: 1.5,
+            x: 100,
             opacity: 0,
-            ease: "back.out(1.7)"
+
         });
     },
 })
@@ -45,10 +45,8 @@ export default defineComponent({
 .bannerContainer {
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
-    width: 77vw;
+    width: 100vw;
     position: relative;
-    z-index: 0;
 }
 
 .botaoDeRedimensionamento {
@@ -57,15 +55,17 @@ export default defineComponent({
 }
 
 video {
-    filter: grayscale(0.2);
-    opacity: 0.5;
+    opacity: 0.3;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    z-index: 1;
 }
 
 .conteudoDoBanner {
     position: absolute;
-    margin: 20% 0 0 45px;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
     width: 90%;
     max-width: 750px;
     background: rgba(255, 255, 255, 0.1);
@@ -75,6 +75,7 @@ video {
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     padding: 30px;
+    z-index: 1;
 }
 
 .conteudoDoBanner h1 {

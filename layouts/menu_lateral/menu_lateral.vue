@@ -56,36 +56,13 @@ export default defineComponent({
     margin: 0 auto;
     position: absolute;
     margin-top: 20px;
-    left: 5px;
+    left: 0;
     height: 100%;
     float: left;
-    padding: 0 25px;
+    padding: 0 40px 0 15px;
+    background-color: #000000;
+    border-top-right-radius: 8px;
     z-index: 2;
-}
-
-.menu-lateral-container::before {
-    border-radius: 10px;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(20, 20, 20, 0.968);
-    z-index: -1;
-}
-
-.menu-lateral-container::after {
-    border-radius: 10px;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url(/public/static/img/banner/banner.png);
-    background-position-x: 1300px;
-    z-index: -2;
 }
 
 /* Configurações gerais */
@@ -98,11 +75,11 @@ section:nth-of-type(1) {
 }
 
 i {
-    color: var(--cor-folly);
+    color: #8B0000;
 }
 
 span {
-    color: gray;
+    color: #b4b4b4d3;
     cursor: cell;
     width: 0;
     position: relative;

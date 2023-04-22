@@ -76,7 +76,7 @@ export default defineComponent({
 }
 
 .streams-container .video {
-    margin: 5px 0 0 10px;
+    margin: 5px 10px 0 0;
     width: 100vw;
 }
 

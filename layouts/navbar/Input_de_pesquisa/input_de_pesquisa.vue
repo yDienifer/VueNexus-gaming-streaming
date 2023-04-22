@@ -32,7 +32,7 @@ export default defineComponent({
 <style scoped>
 .caixaDePesquisa {
     border-bottom: 1px solid white;
-    padding: 10px;
+    padding: 6px;
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px;
     background-color: transparent;

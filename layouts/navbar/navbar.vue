@@ -70,7 +70,8 @@ export default defineComponent({
 </script>
 
 <template>
-  <header :class="{ 'retirar-clip-path': contaAberta }">
+  <div id="teste">
+    <header :class="{ 'retirar-clip-path': contaAberta }">
     <div id="logoVueNexusContainer">
       <i class="fa-solid fa-spa"></i>
       <p>VueNexus</p>
@@ -79,7 +80,8 @@ export default defineComponent({
     <nav id="nav-para-desktop">
       <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#">Lives</a></li>
+        <li><a href="#">Channels</a></li>
+        <li><a href="#">Live</a></li>
         <li><a href="#">Streams</a></li>
         <div class="contaDoUsuario">
           <i class="fa-regular fa-bell" id="iconNotificacoes"></i>
@@ -107,6 +109,9 @@ export default defineComponent({
       </aside>
     </nav>
   </header>
+  </div>
+
+  
 </template>
 
 <style scoped>
@@ -114,37 +119,22 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0 auto;
   height: 100%;
   width: 100vw;
-  padding: 20px 65px;
-  clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+  padding: 25px 65px;
   position: relative;
-}
-
-header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(20, 20, 20, 0.959);
-  z-index: -1;
-}
-
-header::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url(/public/static/img/banner/banner.png);
-  z-index: -2;
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+  border: 1px solid rgba(73, 73, 73, 0.397);
+  box-shadow: 0px 2.2px 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 2.2px 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 2.2px 1px rgba(0, 0, 0, 0.1);
+  background-color: rgb(29, 41, 57, 0.9);
 }
 
 .retirar-clip-path {
   clip-path: none;
+  z-index: -2;
 }
 
 header #logoVueNexusContainer {
@@ -152,7 +142,7 @@ header #logoVueNexusContainer {
 }
 
 header #logoVueNexusContainer p {
-  font-size: clamp(14px, 3vw, 18px);
+  font-size: clamp(14px, 3vw, 21px);
   font-family: "Valorant", cursive;
   margin-left: 5px;
 }
@@ -204,7 +194,7 @@ header nav {
   font-weight: bold;
 }
 
-#nav-para-desktop li:nth-of-type(3) {
+#nav-para-desktop li:nth-of-type(4) {
   margin: 0;
 }
 

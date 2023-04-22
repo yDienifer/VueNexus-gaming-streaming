@@ -1,28 +1,26 @@
 <template>
-    <div class="container">
-        <div class="formularioDeCadastroContainer" v-if="formulárioDeCadastroVisível">
-            <RouterLink to="/home" @click.prevent="btnVoltarParaHome">
-                <i class="fa-sharp fa-solid fa-xmark" ref="iconeFecharFormulário"></i>
-            </RouterLink>
-            <form @submit="enviarForm">
-                <h1>Create your account now and <span>win exclusive Valorant rewards</span> through our
-                    <span>giveaways and
-                        competitions!</span>
-                </h1>
-                <input id="nomeDoUsuario" name="nomeDoUsuario" type="text" placeholder="Create a unique username"
-                    :maxlength="16" required>
-                <input id="emailDoUsuario" name="emailDoUsuario" placeholder="Enter your email here" type="email" required>
-                <input ref="Puiid" id="puuidDoUsuario" name="puuidDoUsuario" placeholder="What's your Valorant PUUID?"
-                    type="text" :maxlength="32">
-                <input id="senhaDoUsuario" name="senhaDoUsuario" type="password" placeholder="Create a secure password"
-                    :maxlength="8" required>
-                <botaoDeRedimensionamento id="btn" titulo-introdutorio-do-btn="Start my journey" />
-                <span id="login">Are you already a member?</span>
-                <ul>
-                    <li id="resultadoDoPuuid"><a href="#">{{ Puuid }}</a></li>
-                </ul>
-            </form>
-        </div>
+    <div class="formularioDeCadastroContainer" v-if="formulárioDeCadastroVisível">
+        <RouterLink to="/home" @click.prevent="btnVoltarParaHome">
+            <i class="fa-sharp fa-solid fa-xmark" ref="iconeFecharFormulário"></i>
+        </RouterLink>
+        <form @submit="enviarForm">
+            <h1>Create your account now and <span>win exclusive Valorant rewards</span> through our
+                <span>giveaways and
+                    competitions!</span>
+            </h1>
+            <input id="nomeDoUsuario" name="nomeDoUsuario" type="text" placeholder="Create a unique username"
+                :maxlength="16" required>
+            <input id="emailDoUsuario" name="emailDoUsuario" placeholder="Enter your email here" type="email" required>
+            <input ref="Puiid" id="puuidDoUsuario" name="puuidDoUsuario" placeholder="What's your Valorant PUUID?"
+                type="text" :maxlength="32">
+            <input id="senhaDoUsuario" name="senhaDoUsuario" type="password" placeholder="Create a secure password"
+                :maxlength="8" required>
+            <botaoDeRedimensionamento id="btn" titulo-introdutorio-do-btn="Start my journey" />
+            <span id="login">Are you already a member?</span>
+            <ul>
+                <li id="resultadoDoPuuid"><a href="#">{{ Puuid }}</a></li>
+            </ul>
+        </form>
     </div>
 </template>
 
@@ -106,21 +104,17 @@ export default defineComponent({
 </script>
   
 <style scoped>
-.container {
-    position: relative;
-}
-
 .formularioDeCadastroContainer {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: url(/public/static/img/background/gekko_dark_1.png);
+    background-image: url(/public/static/img/banner/Skye_KeyArt_PR_2.jpg);
     background-size: 180%;
     display: flex;
     align-items: center;
-    z-index: 5;
+    z-index: 9;
 }
 
 .formularioDeCadastroContainer i {
