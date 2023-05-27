@@ -16,6 +16,6 @@
 
 body {
   background-color: var(--cor-rich-black);
-  overflow-x: hidden;
+  overflow: hidden;
   height: 100vw;
 }

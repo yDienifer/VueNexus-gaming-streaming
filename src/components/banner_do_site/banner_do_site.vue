@@ -5,7 +5,7 @@ import botaoDeRedimensionamento from "../botao/botao.vue";
 <template>
     <div class="bannerContainer">
         <video autoplay muted loop>
-            <source src="../../../public/static/video/videoplayback.mp4" type="video/mp4" />
+            <source src="../../../public/static/video/banner_valorant.mp4" type="video/mp4" />
         </video>
         <div id="bannerBackground"></div>
         <div class="conteudoDoBanner">
