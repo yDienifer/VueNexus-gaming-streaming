@@ -1,0 +1,57 @@
+{
+    "Songs": [
+        {
+            "id": 1,
+            "musicCover": "/public/static/img/valorant_song_covers/Die_for_you.jpeg",
+            "altTextOfMusicCover": "Die For You ft. Grabbitz",
+            "musicTitle": "Die for you",
+            "musicArtist": "Grabbitz",
+            "informationAboutTheSection": {
+                "carouselTitle": "#Music",
+                "carouselCaption": "Get into the rhythm of Valorant and let the music guide your victory!"
+             }
+        },
+        {
+            "id": 2,
+            "musicCover": "/public/static/img/valorant_song_covers/>one.jpg",
+            "altTextOfMusicCover": ">one (greater than one) ft. Ericdoa",
+            "musicTitle": ">one (greater than one)",
+            "musicArtist": "VALORANT, ericdoa"
+        },
+        {
+            "id": 3,
+            "musicCover": "/public/static/img/valorant_song_covers/Limitess.jpeg",
+            "altTextOfMusicCover": "Limitess ft. Shyloom",
+            "musicTitle": "Limitess",
+            "musicArtist": "VALORANT, Shyloom"
+        },
+        {
+            "id": 4,
+            "musicCover": "/public/static/img/valorant_song_covers/Visions.jpeg",
+            "altTextOfMusicCover": "Visions ft. Eàj, Safari Riot",
+            "musicTitle": "Visions",
+            "musicArtist": "VALORANT, Eàj, Safari Riot"
+        },
+        {
+            "id": 5,
+            "musicCover": "/public/static/img/valorant_song_covers/Fire_Again.jpeg",
+            "altTextOfMusicCover": "Fire Again Ft. Ashnikko",
+            "musicTitle": "Fire Again",
+            "musicArtist": "VALORANT, Ashnikko"
+        },
+        {
+            "id": 6,
+            "musicCover": "/public/static/img/valorant_song_covers/Can′t_Slow_Me_Down.jpeg",
+            "altTextOfMusicCover": "Can′t Slow Me Down Ft. GroovyRoom",
+            "musicTitle": "Can′t Slow Me Down",
+            "musicArtist": "VALORANT, GroovyRoom"
+        },
+        {
+            "id": 7,
+            "musicCover": "/public/static/img/valorant_song_covers/RAJA.jpeg",
+            "altTextOfMusicCover": "RAJA Ft. ARB4, Tienas and Mangal Suvarnan",
+            "musicTitle": "RAJA",
+            "musicArtist": "VALORANT, ARB4, Tienas and Mangal Suvarnan"
+        }
+    ]
+}

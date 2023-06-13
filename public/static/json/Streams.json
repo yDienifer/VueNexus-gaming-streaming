@@ -1,0 +1,429 @@
+{
+   "RankedMatches": [
+      {
+         "id": 1,
+         "streamCoverImage": "/public/static/img/stream_cover/overlays_reference.png",
+         "streamCoverImageAlt": "Live 1",
+         "streamTitle": "The Ultimate Showdown: Valorant's Top Ranked Players Battle It Out!",
+         "streamerProfileImage": "/public/static/img/profile_icons/icon_profile.png",
+         "streamerProfileAlt": "AgentAce",
+         "streamerName": "AgentAce",
+         "tagName": "Ranked Matches",
+         "streamType": "Live",
+         "informationAboutTheSection": {
+            "carouselTitle": "#Ranked Matches",
+            "carouselCaption": "The Best Players at the Top"
+         }
+      },
+      {
+         "id": 2,
+         "streamCoverImage": "/public/static/img/stream_cover/overlays_reference.png",
+         "streamCoverImageAlt": "Live 2",
+         "streamTitle": "Climbing the Ranks: Tips and Tricks to Reach the Top of Valorant",
+         "streamerProfileImage": "/public/static/img/profile_icons/icon_profile2.png",
+         "streamerProfileAlt": "ValorantQueen",
+         "streamerName": "ValorantQueen",
+         "tagName": "Ranked Matches",
+         "streamType": "Live"
+      },
+      {
+         "id": 3,
+         "streamCoverImage": "/public/static/img/stream_cover/overlays_reference.png",
+         "streamCoverImageAlt": "Live 3",
+         "streamTitle": "Unstoppable: The Best Ranked Matches of the Week",
+         "streamerProfileImage": "/public/static/img/profile_icons/icon_profile3.png",
+         "streamerProfileAlt": "TheViperShooter",
+         "streamerName": "TheViperShooter",
+         "tagName": "Ranked Matches",
+         "streamType": "Live"
+      },
+      {
+         "id": 4,
+         "streamCoverImage": "/public/static/img/stream_cover/overlays_reference.png",
+         "streamCoverImageAlt": "Live 4",
+         "streamTitle": "From Silver to Diamond: One Player's Journey Through Valorant's Ranked System",
+         "streamerProfileImage": "/public/static/img/profile_icons/icon_profile4.png",
+         "streamerProfileAlt": "SpikeSlayer",
+         "streamerName": "SpikeSlayer",
+         "tagName": "Ranked Matches",
+         "streamType": "Replay"
+      },
+      {
+         "id": 5,
+         "streamCoverImage": "/public/static/img/stream_cover/overlays_reference.png",
+         "streamCoverImageAlt": "Live 5",
+         "streamTitle": "Tensions Run High in Valorant's Most Intense Ranked Matches",
+         "streamerProfileImage": "/public/static/img/profile_icons/icon_profile5.png",
+         "streamerProfileAlt": "CypherTheSpy",
+         "streamerName": "CypherTheSpy",
+         "tagName": "Ranked Matches",
+         "streamType": "Replay"
+      }
+   ],
+   "CasualMatches": [
+      {
+         "id": 1,
+         "streamCoverImage": "/public/static/img/stream_cover/overlays_reference.png",
+         "streamCoverImageAlt": "Live 1",
+         "streamTitle": "Chilling and Fragging: Casual Matches with Friends",
+         "streamerProfileImage": "/public/static/img/profile_icons/icon_profile6.png",
+         "streamerProfileAlt": "PhoenixFireball",
+         "streamerName": "PhoenixFireball",
+         "tagName": "Casual Matches",
+         "streamType": "Replay",
+         "informationAboutTheSection": {
+            "carouselTitle": "#Casual Matches",
+            "carouselCaption": "Relaxing with Valorant"
+         }
+      },
+      {
+         "id": 2,
+         "streamCoverImage": "/public/static/img/stream_cover/overlays_reference.png",
+         "streamCoverImageAlt": "Live 2",
+         "streamTitle": "Relaxing with Valorant: Casual Matches with Fun Comps",
+         "streamerProfileImage": "/public/static/img/profile_icons/icon_profile7.png",
+         "streamerProfileAlt": "SageTheHealer",
+         "streamerName": "SageTheHealer",
+         "tagName": "Casual Matches",
+         "streamType": "Live"
+      },
+      {
+         "id": 3,
+         "streamCoverImage": "/public/static/img/stream_cover/overlays_reference.png",
+         "streamCoverImageAlt": "Live 3",
+         "streamTitle": "Casual Frenzy: The Best Casual Matches of the Week",
+         "streamerProfileImage": "/public/static/img/profile_icons/icon_profile8.png",
+         "streamerProfileAlt": "RazeTheRoamer",
+         "streamerName": "RazeTheRoamer",
+         "tagName": "Casual Matches",
+         "streamType": "Live"
+      },
+      {
+         "id": 4,
+         "streamCoverImage": "/public/static/img/stream_cover/overlays_reference.png",
+         "streamCoverImageAlt": "Live 4",
+         "streamTitle": "Off-Meta Fun: Trying Out New Comps in Casual Matches",
+         "streamerProfileImage": "/public/static/img/profile_icons/icon_profile9.png",
+         "streamerProfileAlt": "JettTheAssassin",
+         "streamerName": "JettTheAssassin",
+         "tagName": "Casual Matches",
+         "streamType": "Replay"
+      },
+      {
+         "id": 5,
+         "streamCoverImage": "/public/static/img/stream_cover/overlays_reference.png",
+         "streamCoverImageAlt": "Live 5",
+         "streamTitle": "Let's Just Have Fun: A Casual Match Community Event",
+         "streamerProfileImage": "/public/static/img/profile_icons/icon_profile10.png",
+         "streamerProfileAlt": "BrimstoneTheCommander",
+         "streamerName": "BrimstoneTheCommander",
+         "tagName": "Casual Matches",
+         "streamType": "Live"
+      }
+   ],
+   "Tutorials": [
+      {
+         "id": 1,
+         "streamCoverImage": "/public/static/img/stream_cover/overlays_reference.png",
+         "streamCoverImageAlt": "Live 1",
+         "streamTitle": "Learn from the Pros: Mastering Agent Abilities",
+         "streamerProfileImage": "/public/static/img/profile_icons/icon_profile11.png",
+         "streamerProfileAlt": "OmenTheShrouded",
+         "streamerName": "OmenTheShrouded",
+         "tagName": "Tutorials",
+         "streamType": "Live",
+         "informationAboutTheSection": {
+            "carouselTitle": "#Tutorials",
+            "carouselCaption": "Learn from the Pros"
+         }
+      },
+      {
+         "id": 2,
+         "streamCoverImage": "/public/static/img/stream_cover/overlays_reference.png",
+         "streamCoverImageAlt": "Live 2",
+         "streamTitle": "Tips and Tricks: How to Improve Your Aim in Valorant",
+         "streamerProfileImage": "/public/static/img/profile_icons/icon_profile12.png",
+         "streamerProfileAlt": "KilljoyTheEngineer",
+         "streamerName": "KilljoyTheEngineer",
+         "tagName": "Tutorials",
+         "streamType": "Live"
+      },
+      {
+         "id": 3,
+         "streamCoverImage": "/public/static/img/stream_cover/overlays_reference.png",
+         "streamCoverImageAlt": "Live 3",
+         "streamTitle": "Becoming a Valorant Pro: Positioning and Movement Techniques",
+         "streamerProfileImage": "/public/static/img/profile_icons/icon_profile1.png",
+         "streamerProfileAlt": "ReynaTheEmpress",
+         "streamerName": "ReynaTheEmpress",
+         "tagName": "Tutorials",
+         "streamType": "Live"
+      },
+      {
+         "id": 4,
+         "streamCoverImage": "/public/static/img/stream_cover/overlays_reference.png",
+         "streamCoverImageAlt": "Live 4",
+         "streamTitle": "Rushing and Defending: Winning Strategies for Each Map",
+         "streamerProfileImage": "/public/static/img/profile_icons/icon_profile2.png",
+         "streamerProfileAlt": "SkyeTheEcoWarrior",
+         "streamerName": "SkyeTheEcoWarrior",
+         "tagName": "Tutorials",
+         "streamType": "Replay"
+      },
+      {
+         "id": 5,
+         "streamCoverImage": "/public/static/img/stream_cover/overlays_reference.png",
+         "streamCoverImageAlt": "Live 5",
+         "streamTitle": "Top Tier Tactics: The Best Tips from Professional Valorant Players",
+         "streamerProfileImage": "/public/static/img/profile_icons/icon_profile3.png",
+         "streamerProfileAlt": "ViperTheToxicologist",
+         "streamerName": "ViperTheToxicologist",
+         "tagName": "Tutorials",
+         "streamType": "Live"
+      }
+   ],
+   "PlayingWithViewers": [
+      {
+         "id": 1,
+         "streamCoverImage": "/public/static/img/stream_cover/overlays_reference.png",
+         "streamCoverImageAlt": "Live 1",
+         "streamTitle": "Interacting with the Community: Live Valorant Matches with Fans",
+         "streamerProfileImage": "/public/static/img/profile_icons/icon_profile4.png",
+         "streamerProfileAlt": "AceOfValorant",
+         "streamerName": "AceOfValorant",
+         "tagName": "Playing With Viewers",
+         "streamType": "Live",
+         "informationAboutTheSection": {
+            "carouselTitle": "#PlayingWithViewers",
+            "carouselCaption": "Interacting with the Community"
+         }
+      },
+      {
+         "id": 2,
+         "streamCoverImage": "/public/static/img/stream_cover/overlays_reference.png",
+         "streamCoverImageAlt": "Live 2",
+         "streamTitle": "Community Plays: Epic Moments from Viewer Games",
+         "streamerProfileImage": "/public/static/img/profile_icons/icon_profile5.png",
+         "streamerProfileAlt": "BladeMaster",
+         "streamerName": "BladeMaster",
+         "tagName": "Playing With Viewers",
+         "streamType": "Live"
+      },
+      {
+         "id": 3,
+         "streamCoverImage": "/public/static/img/stream_cover/overlays_reference.png",
+         "streamCoverImageAlt": "Live 3",
+         "streamTitle": "Friendly Competition: Viewer Tournaments in Valorant",
+         "streamerProfileImage": "/public/static/img/profile_icons/icon_profile6.png",
+         "streamerProfileAlt": "TheValorantGuru",
+         "streamerName": "TheValorantGuru",
+         "tagName": "Playing With Viewers",
+         "streamType": "Live"
+      },
+      {
+         "id": 4,
+         "streamCoverImage": "/public/static/img/stream_cover/overlays_reference.png",
+         "streamCoverImageAlt": "Live 4",
+         "streamTitle": "Team Up with Viewers: Playing Unranked Games Together",
+         "streamerProfileImage": "/public/static/img/profile_icons/icon_profile7.png",
+         "streamerProfileAlt": "TheSneakySova",
+         "streamerName": "TheSneakySova",
+         "tagName": "Playing With Viewers",
+         "streamType": "Replay"
+      },
+      {
+         "id": 5,
+         "streamCoverImage": "/public/static/img/stream_cover/overlays_reference.png",
+         "streamCoverImageAlt": "Live 5",
+         "streamTitle": "Streamers vs. Viewers: The Ultimate Battle for Bragging Rights",
+         "streamerProfileImage": "/public/static/img/profile_icons/icon_profile8.png",
+         "streamerProfileAlt": "FlashbangFrenzy",
+         "streamerName": "FlashbangFrenzy",
+         "tagName": "Playing With Viewers",
+         "streamType": "Replay"
+      }
+   ],
+   "Competitions": [
+      {
+         "id": 1,
+         "streamCoverImage": "/public/static/img/stream_cover/overlays_reference.png",
+         "streamCoverImageAlt": "Live 1",
+         "streamTitle": "Unraveling the Game: In-Depth Analysis of Valorant Matches",
+         "streamerProfileImage": "/public/static/img/profile_icons/icon_profile9.png",
+         "streamerProfileAlt": "TheUltimateJett",
+         "streamerName": "TheUltimateJett",
+         "tagName": "Competitions",
+         "streamType": "Replay",
+         "informationAboutTheSection": {
+            "carouselTitle": "#Competitions",
+            "carouselCaption": "The Strongest Teams Face Off"
+         }
+      },
+      {
+         "id": 2,
+         "streamCoverImage": "/public/static/img/stream_cover/overlays_reference.png",
+         "streamCoverImageAlt": "Live 2",
+         "streamTitle": "Dissecting Gameplay: The Best Moments from Valorant Matches",
+         "streamerProfileImage": "/public/static/img/profile_icons/icon_profile10.png",
+         "streamerProfileAlt": "TheReconDrone",
+         "streamerName": "TheReconDrone",
+         "tagName": "Competitions",
+         "streamType": "Replay"
+      },
+      {
+         "id": 3,
+         "streamCoverImage": "/public/static/img/stream_cover/overlays_reference.png",
+         "streamCoverImageAlt": "Live 3",
+         "streamTitle": "Secrets of Professional Plays: Expert Analysis of Pro Team Strategies",
+         "streamerProfileImage": "/public/static/img/profile_icons/icon_profile11.png",
+         "streamerProfileAlt": "TheMolotovMaven",
+         "streamerName": "TheMolotovMaven",
+         "tagName": "Competitions",
+         "streamType": "Live"
+      },
+      {
+         "id": 4,
+         "streamCoverImage": "/public/static/img/stream_cover/overlays_reference.png",
+         "streamCoverImageAlt": "Live 4",
+         "streamTitle": "Strategic Genius: Analyzing the Mindset of Top Valorant Players",
+         "streamerProfileImage": "/public/static/img/profile_icons/icon_profile12.png",
+         "streamerProfileAlt": "TheSharpshooter",
+         "streamerName": "TheSharpshooter",
+         "tagName": "Competitions",
+         "streamType": "Live"
+      },
+      {
+         "id": 5,
+         "": "/public/static/img/stream_cover/overlays_reference.png",
+         "streamCoverImageAlt": "Live 5",
+         "streamTitle": "Mind-Blowing Plays: Breaking Down the Best Valorant Clutches and Comebacks",
+         "streamerProfileImage": "/public/static/img/profile_icons/icon_profile1.png",
+         "streamerProfileAlt": "TheTacticalBrimstone",
+         "streamerName": "TheTacticalBrimstone",
+         "tagName": "Competitions",
+         "streamType": "Replay"
+      }
+   ],
+   "Challenges": [
+      {
+         "id": 1,
+         "streamCoverImage": "/public/static/img/stream_cover/overlays_reference.png",
+         "streamCoverImageAlt": "Live 1",
+         "streamTitle": "Pushing the Limits: Epic Valorant Challenges",
+         "streamerProfileImage": "/public/static/img/profile_icons/icon_profile2.png",
+         "streamerProfileAlt": "TheUltimateJett",
+         "streamerName": "TheUltimateJett",
+         "tagName": "Challenges",
+         "streamType": "Replay",
+         "informationAboutTheSection": {
+            "carouselTitle": "#Challenges",
+            "carouselCaption": "Pushing the Limits"
+         }
+      },
+      {
+         "id": 2,
+         "streamCoverImage": "/public/static/img/stream_cover/overlays_reference.png",
+         "streamCoverImageAlt": "Live 2",
+         "streamTitle": "Creative Challenges: Trying Out New Playstyles in Valorant",
+         "streamerProfileImage": "/public/static/img/profile_icons/icon_profile3.png",
+         "streamerProfileAlt": "TheToxicViper",
+         "streamerName": "TheToxicViper",
+         "tagName": "Challenges",
+         "streamType": "Live"
+      },
+      {
+         "id": 3,
+         "streamCoverImage": "/public/static/img/stream_cover/overlays_reference.png",
+         "streamCoverImageAlt": "Live 3",
+         "streamTitle": "Fun with Friends: Hilarious Valorant Challenges with Friends",
+         "streamerProfileImage": "/public/static/img/profile_icons/icon_profile4.png",
+         "streamerProfileAlt": "TheEcoWarrior",
+         "streamerName": "TheEcoWarrior",
+         "tagName": "Challenges",
+         "streamType": "Live"
+      },
+      {
+         "id": 4,
+         "streamCoverImage": "/public/static/img/stream_cover/overlays_reference.png",
+         "streamCoverImageAlt": "Live 4",
+         "streamTitle": "The Ultimate Challenge: Trying to Win a Game Without Firing a Single Shot",
+         "streamerProfileImage": "/public/static/img/profile_icons/icon_profile5.png",
+         "streamerProfileAlt": "TheImperialReyna",
+         "streamerName": "TheImperialReyna",
+         "tagName": "Challenges",
+         "streamType": "Live"
+      },
+      {
+         "id": 5,
+         "streamCoverImage": "/public/static/img/stream_cover/overlays_reference.png",
+         "streamCoverImageAlt": "Live 5",
+         "streamTitle": "The Ultimate Showdown: Players Face Off in the Most Difficult Valorant Challenges",
+         "streamerProfileImage": "/public/static/img/profile_icons/icon_profile6.png",
+         "streamerProfileAlt": "TheTiltProof",
+         "streamerName": "TheTiltProof",
+         "tagName": "Challenges",
+         "streamType": "Replay"
+      }
+   ],
+   "News": [
+      {
+         "id": 1,
+         "streamCoverImage": "/public/static/img/stream_cover/overlays_reference.png",
+         "streamCoverImageAlt": "Live 1",
+         "streamTitle": "The Latest Updates: New Agents, Maps, and More",
+         "streamerProfileImage": "/public/static/img/profile_icons/icon_profile2.png",
+         "streamerProfileAlt": "TheRazeMain",
+         "streamerName": "TheRazeMain",
+         "tagName": "News",
+         "streamType": "Live",
+         "informationAboutTheSection": {
+            "carouselTitle": "#News",
+            "carouselCaption": "Discover What's New"
+         }
+      },
+      {
+         "id": 2,
+         "streamCoverImage": "/public/static/img/stream_cover/overlays_reference.png",
+         "streamCoverImageAlt": "Live 2",
+         "streamTitle": "Discover What's New: A Look at the Latest Valorant Patches",
+         "streamerProfileImage": "/public/static/img/profile_icons/icon_profile3.png",
+         "streamerProfileAlt": "ThePhoenixPhoenix",
+         "streamerName": "ThePhoenixPhoenix",
+         "tagName": "News",
+         "streamType": "Live"
+      },
+      {
+         "id": 3,
+         "streamCoverImage": "/public/static/img/stream_cover/overlays_reference.png",
+         "streamCoverImageAlt": "Live 3",
+         "streamTitle": "Breaking News: Major Changes Coming to Valorant's Ranked System",
+         "streamerProfileImage": "/public/static/img/profile_icons/icon_profile4.png",
+         "streamerProfileAlt": "TheSageSavior",
+         "streamerName": "TheSageSavior",
+         "tagName": "News",
+         "streamType": "Replay"
+      },
+      {
+         "id": 4,
+         "streamCoverImage": "/public/static/img/stream_cover/overlays_reference.png",
+         "streamCoverImageAlt": "Live 4",
+         "streamTitle": "What's Next for Valorant? A Sneak Peek into Future Updates",
+         "streamerProfileImage": "/public/static/img/profile_icons/icon_profile5.png",
+         "streamerProfileAlt": "TheKillJoy",
+         "streamerName": "TheKillJoy",
+         "tagName": "News",
+         "streamType": "Replay"
+      },
+      {
+         "id": 5,
+         "streamCoverImage": "/public/static/img/stream_cover/overlays_reference.png",
+         "streamCoverImageAlt": "Live 5",
+         "streamTitle": "Insider Info: Behind-the-Scenes Look at Valorant's Development Process",
+         "streamerProfileImage": "/public/static/img/profile_icons/icon_profile6.png",
+         "streamerProfileAlt": "TheOpMaster",
+         "streamerName": "TheOpMaster",
+         "tagName": "News",
+         "streamType": "Live"
+      }
+   ]
+}

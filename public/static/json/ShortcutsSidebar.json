@@ -1,0 +1,69 @@
+{
+  "ShortcutsSidebar": {
+    "DiscoverSection": [
+      {
+        "id": 1,
+        "shortcutName": "Home",
+        "shortcutIcon": "fa-solid fa-house",
+        "shortcutLink": "/"
+      },
+      {
+        "id": 2,
+        "shortcutName": "Live Streams",
+        "shortcutIcon": "fa-solid fa-eye",
+        "shortcutLink": "/"
+      },
+      {
+        "id": 3,
+        "shortcutName": "VODs",
+        "shortcutIcon": "fa-solid fa-video",
+        "shortcutLink": "/"
+      },
+      {
+        "id": 4,
+        "shortcutName": "Event Calendar",
+        "shortcutIcon": "fa-regular fa-calendar-days",
+        "shortcutLink": "/"
+      },
+      {
+        "id": 4,
+        "shortcutName": "Game Categories",
+        "shortcutIcon": "fa-solid fa-gamepad",
+        "shortcutLink": "/"
+      }
+    ],
+    "CommunityForumSection": [
+      {
+        "id": 1,
+        "shortcutName": "User Profile",
+        "shortcutIcon": "fa-solid fa-user-ninja",
+        "shortcutLink": "/Community"
+      },
+      {
+        "id": 2,
+        "shortcutName": "Favorites",
+        "shortcutIcon": "fa-solid fa-bookmark",
+        "shortcutLink": "/Community"
+      },
+      {
+        "id": 3,
+        "shortcutName": "Community",
+        "shortcutIcon": "fa-solid fa-user-group",
+        "shortcutLink": "/Community"
+      },
+      {
+        "id": 4,
+        "shortcutName": "Achievements and Rewards",
+        "shortcutIcon": "fa-solid fa-trophy",
+        "shortcutLink": "/"
+      },
+      {
+        
+        "id": 5,
+        "shortcutName": "Settings",
+        "shortcutIcon": "fa-solid fa-gear",
+        "shortcutLink": "/Community"
+      }
+    ]
+  }
+}

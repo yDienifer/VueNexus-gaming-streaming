@@ -43,7 +43,8 @@
     "tests/**/*.tsx",
     "src/assets/*.json",
     "public/static/json/*.json",
-    "src/**/*.vue"
+    "src/**/*.vue",
+    "views/**/*",
   ],
   "exclude": [ // Arquivos que NÃO serão incluídos no programa.
     "node_modules"

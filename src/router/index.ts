@@ -5,12 +5,23 @@ const router = createRouter({
   routes: [
     {
       path: "/",
-      redirect: "/home"
+      name: "Home",
+      component: () => import('../views/Main.vue'),
     },
     {
-      path: "/conta",
-      name: "conta",
-      component: () => import("../views/layoutConta.vue"),
+      path: "/account",
+      name: "account",
+      component: () => import('../views/navbar_shortcuts/RegistrationLoginForm.vue'),
+    },
+    {
+      path: "/agentGuides",
+      name: "AgentGuides",
+      component: () => import('../views/sidebar_shortcuts/AgentGuides.vue')
+    },
+    {
+      path: "/community",
+      name: "Community",
+      component: () => import("../views/sidebar_shortcuts/Community.vue"),
     },
   ],
 });

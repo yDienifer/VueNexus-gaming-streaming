@@ -5,7 +5,8 @@
     "src/**/*",
     "src/**/*.vue",
     "layouts/**/*.vue",
-    "public/static/json/*.json"
+    "public/static/json/*.json",
+    "views/**/*",
   ],
   "exclude": [
     "src/**/__tests__/*"
