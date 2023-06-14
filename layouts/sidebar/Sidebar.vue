@@ -37,7 +37,6 @@ export default defineComponent({
 
 <style scoped>
 .sidebarContainer {
-  align-items: center;
   background-color: var(--cor-rich-black);
   border-top-right-radius: 8px;
   display: flex;

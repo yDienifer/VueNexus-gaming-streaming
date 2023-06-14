@@ -12,7 +12,8 @@
                 <div class="streamSection">
                     <div class="streamSectionRankedMatches">
                         <Carousel :carouselTitle="StreamRankedMatches[0]?.informationAboutTheSection?.carouselTitle || ''"
-                            :carouselCaption="StreamRankedMatches[0]?.informationAboutTheSection?.carouselCaption || ''">
+                            :carouselCaption="StreamRankedMatches[0]?.informationAboutTheSection?.carouselCaption || ''"
+                            :exploreButtonLink="StreamRankedMatches[0]?.informationAboutTheSection?.exploreButtonLink || ''">
                             <template v-slot:default>
                                 <div class="carrosselItem" v-for="(match, index) in StreamRankedMatches" :key="index">
                                     <StreamStructure :streamCoverImage="match.streamCoverImage"
@@ -26,7 +27,8 @@
                     </div>
                     <div class="StreamSectionCasualMatches">
                         <Carousel :carouselTitle="StreamCasualMatches[0]?.informationAboutTheSection?.carouselTitle || ''"
-                            :carouselCaption="StreamCasualMatches[0]?.informationAboutTheSection?.carouselCaption || ''">
+                            :carouselCaption="StreamCasualMatches[0]?.informationAboutTheSection?.carouselCaption || ''"
+                            :exploreButtonLink="StreamCasualMatches[0]?.informationAboutTheSection?.exploreButtonLink || ''">
                             <template v-slot:default>
                                 <div class="carrosselItem" v-for="(match, index) in StreamCasualMatches" :key="index">
                                     <StreamStructure :streamCoverImage="match.streamCoverImage"
@@ -40,7 +42,8 @@
                     </div>
                     <div class="streamSectionTutorials">
                         <Carousel :carouselTitle="StreamTutorials[0]?.informationAboutTheSection?.carouselTitle || ''"
-                            :carouselCaption="StreamTutorials[0]?.informationAboutTheSection?.carouselCaption || ''">
+                            :carouselCaption="StreamTutorials[0]?.informationAboutTheSection?.carouselCaption || ''"
+                            :exploreButtonLink="StreamTutorials[0]?.informationAboutTheSection?.exploreButtonLink || ''">
                             <template v-slot:default>
                                 <div class="carrosselItem" v-for="(match, index) in StreamTutorials" :key="index">
                                     <StreamStructure :streamCoverImage="match.streamCoverImage"
@@ -55,7 +58,8 @@
                     <div class="streamSectionPlayingWithViewers">
                         <Carousel
                             :carouselTitle="StreamPlayingWithViewers[0]?.informationAboutTheSection?.carouselTitle || ''"
-                            :carouselCaption="StreamPlayingWithViewers[0]?.informationAboutTheSection?.carouselCaption || ''">
+                            :carouselCaption="StreamPlayingWithViewers[0]?.informationAboutTheSection?.carouselCaption || ''"
+                            :exploreButtonLink="StreamPlayingWithViewers[0]?.informationAboutTheSection?.exploreButtonLink || ''">
                             <template v-slot:default>
                                 <div class="carrosselItem" v-for="(match, index) in StreamPlayingWithViewers" :key="index">
                                     <StreamStructure :streamCoverImage="match.streamCoverImage"
@@ -69,7 +73,8 @@
                     </div>
                     <div class="streamSectionCompetitions">
                         <Carousel :carouselTitle="StreamCompetitions[0]?.informationAboutTheSection?.carouselTitle || ''"
-                            :carouselCaption="StreamCompetitions[0]?.informationAboutTheSection?.carouselCaption || ''">
+                            :carouselCaption="StreamCompetitions[0]?.informationAboutTheSection?.carouselCaption || ''"
+                            :exploreButtonLink="StreamCompetitions[0]?.informationAboutTheSection?.exploreButtonLink || ''">
                             <template v-slot:default>
                                 <div class="carrosselItem" v-for="(match, index) in StreamCompetitions" :key="index">
                                     <StreamStructure :streamCoverImage="match.streamCoverImage"
@@ -83,7 +88,8 @@
                     </div>
                     <div class="streamSectionChallenges">
                         <Carousel :carouselTitle="StreamChallenges[0]?.informationAboutTheSection?.carouselTitle || ''"
-                            :carouselCaption="StreamChallenges[0]?.informationAboutTheSection?.carouselCaption || ''">
+                            :carouselCaption="StreamChallenges[0]?.informationAboutTheSection?.carouselCaption || ''"
+                            :exploreButtonLink="StreamChallenges[0]?.informationAboutTheSection?.exploreButtonLink || ''">
                             <template v-slot:default>
                                 <div class="carrosselItem" v-for="(match, index) in StreamChallenges" :key="index">
                                     <StreamStructure :streamCoverImage="match.streamCoverImage"
@@ -97,7 +103,8 @@
                     </div>
                     <div class="streamSectionNews">
                         <Carousel :carouselTitle="StreamNews[0]?.informationAboutTheSection?.carouselTitle || ''"
-                            :carouselCaption="StreamNews[0]?.informationAboutTheSection?.carouselCaption || ''">
+                            :carouselCaption="StreamNews[0]?.informationAboutTheSection?.carouselCaption || ''"
+                            :exploreButtonLink="StreamNews[0]?.informationAboutTheSection?.exploreButtonLink || ''">
                             <template v-slot:default>
                                 <div class="carrosselItem" v-for="(match, index) in StreamNews" :key="index">
                                     <StreamStructure :streamCoverImage="match.streamCoverImage"
@@ -178,7 +185,8 @@ type streamCategories = {
     streamType: string,
     informationAboutTheSection?: {
         carouselTitle: string,
-        carouselCaption: string
+        carouselCaption: string,
+        exploreButtonLink: string
     }
 }
 

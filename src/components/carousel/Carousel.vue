@@ -3,9 +3,11 @@
         <div class="carouselBtns">
             <i class="fa-solid fa-left-long" @click="btnBack"></i>
             <i class="fa-solid fa-right-long" @click="btnNext"></i>
-            <span>Explore</span>
+            <a @click="linkToExplore" class="explore-link">
+                <span>Explore</span>
+            </a>
         </div>
-        <div class="carouselTitle"> 
+        <div class="carouselTitle">
             <h1>{{ carouselTitle }}</h1>
             <h3>{{ carouselCaption }}</h3>
         </div>
@@ -16,31 +18,35 @@
         </div>
     </article>
 </template>
-
+  
 <script lang="ts">
 import { defineComponent, ref, onMounted } from "vue";
+import { useRouter } from "vue-router";
 import gsap from "gsap";
-
-import Scrollbar from 'smooth-scrollbar';
+import Scrollbar from "smooth-scrollbar";
 
 export default defineComponent({
     name: "Carousel",
     data() {
         return {
-            scrollbar: null as any
-        }
+            scrollbar: null as any,
+        };
     },
     props: {
         carouselTitle: {
             type: String,
         },
         carouselCaption: {
-            type: String
-        }
+            type: String,
+        },
+        exploreButtonLink: {
+            type: Object,
+        },
     },
-    setup() {
+    setup(props) {
         const carousel = ref(null);
         const carouselContainer = ref<HTMLElement | null>(null);
+        const router = useRouter();
 
         const btnBack = (e: Event) => {
             e.preventDefault();
@@ -59,6 +65,12 @@ export default defineComponent({
                 carouselElement.scrollLeft += carouselElement.offsetWidth;
             }
         };
+
+        const linkToExplore = () => {
+            if (props.exploreButtonLink) {
+                router.push(props.exploreButtonLink);
+            } else { }
+        }
 
         onMounted(() => {
             const options = {
@@ -86,13 +98,16 @@ export default defineComponent({
             btnNext,
             carousel,
             carouselContainer,
+            linkToExplore,
         };
     },
     mounted() {
         if (this.$refs.carouselContainer) {
-            this.scrollbar = Scrollbar.init(this.$refs.carouselContainer as HTMLElement);
+            this.scrollbar = Scrollbar.init(
+                this.$refs.carouselContainer as HTMLElement
+            );
         }
-    }
+    },
 });
 </script>
 
@@ -140,7 +155,8 @@ export default defineComponent({
 .carouselBtns span {
     border: 1px solid white;
     border-radius: 5px;
-    font-family: 'Valorant';
+    cursor: pointer;
+    font-family: "Valorant";
     margin-left: 20px;
     padding: 10px 15px;
     transition: all 0.4s;
@@ -150,7 +166,8 @@ export default defineComponent({
     margin-right: 20px;
 }
 
-.carouselBtns i:hover {
+.carouselBtns i:hover,
+.carouselBtns span:hover {
     border: 1px solid var(--cor-folly);
     color: var(--cor-folly);
 }
@@ -165,7 +182,7 @@ export default defineComponent({
 
 .carouselTitle h1 {
     color: var(--cor-folly);
-    font-family: 'Valorant';
+    font-family: "Valorant";
     font-size: 32px;
 }
 

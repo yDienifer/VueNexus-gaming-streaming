@@ -12,7 +12,8 @@
          "streamType": "Live",
          "informationAboutTheSection": {
             "carouselTitle": "#Ranked Matches",
-            "carouselCaption": "The Best Players at the Top"
+            "carouselCaption": "The Best Players at the Top",
+            "exploreButtonLink": "/rankedMatches"
          }
       },
       {
@@ -73,7 +74,8 @@
          "streamType": "Replay",
          "informationAboutTheSection": {
             "carouselTitle": "#Casual Matches",
-            "carouselCaption": "Relaxing with Valorant"
+            "carouselCaption": "Relaxing with Valorant",
+            "exploreButtonLink": "/casualMatches"
          }
       },
       {
@@ -134,7 +136,8 @@
          "streamType": "Live",
          "informationAboutTheSection": {
             "carouselTitle": "#Tutorials",
-            "carouselCaption": "Learn from the Pros"
+            "carouselCaption": "Learn from the Pros",
+            "exploreButtonLink": "/tutorials"
          }
       },
       {
@@ -195,7 +198,8 @@
          "streamType": "Live",
          "informationAboutTheSection": {
             "carouselTitle": "#PlayingWithViewers",
-            "carouselCaption": "Interacting with the Community"
+            "carouselCaption": "Interacting with the Community",
+            "exploreButtonLink": "/playingWithViewers"
          }
       },
       {
@@ -256,7 +260,8 @@
          "streamType": "Replay",
          "informationAboutTheSection": {
             "carouselTitle": "#Competitions",
-            "carouselCaption": "The Strongest Teams Face Off"
+            "carouselCaption": "The Strongest Teams Face Off",
+            "exploreButtonLink": "/competitions"
          }
       },
       {
@@ -294,7 +299,7 @@
       },
       {
          "id": 5,
-         "": "/public/static/img/stream_cover/overlays_reference.png",
+         "streamCoverImage": "/public/static/img/stream_cover/overlays_reference.png",
          "streamCoverImageAlt": "Live 5",
          "streamTitle": "Mind-Blowing Plays: Breaking Down the Best Valorant Clutches and Comebacks",
          "streamerProfileImage": "/public/static/img/profile_icons/icon_profile1.png",
@@ -317,7 +322,8 @@
          "streamType": "Replay",
          "informationAboutTheSection": {
             "carouselTitle": "#Challenges",
-            "carouselCaption": "Pushing the Limits"
+            "carouselCaption": "Pushing the Limits",
+            "exploreButtonLink": "/challenges"
          }
       },
       {
@@ -378,7 +384,8 @@
          "streamType": "Live",
          "informationAboutTheSection": {
             "carouselTitle": "#News",
-            "carouselCaption": "Discover What's New"
+            "carouselCaption": "Discover What's New",
+            "exploreButtonLink": "/news"
          }
       },
       {
